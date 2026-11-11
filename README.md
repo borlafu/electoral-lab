@@ -5,13 +5,15 @@ Obtiene datos oficiales y sondeos, modela la incertidumbre, simula resultados, a
 de la LOREG por circunscripción y estima **E_p,c**: la probabilidad de que **un voto adicional** a la
 candidatura *p* en la circunscripción *c* cambie la asignación de escaños.
 
-```
-sondeos ─► modelo nacional (Kalman + efectos casa) ─┐
-resultados 2019N/2023 + europeas 2024 ──► modelo territorial (σ calibrada) ─► simulación (20 000 mundos)
-BOE (escaños, candidaturas) + INE (censo) ──────────┘                              │
-                                     reparto legal exacto (3 % + D'Hondt, art. 163) ◄┘
-                                                             │
-                      E_p,c (estimador condicional Rao-Blackwell) + contraste Monte Carlo directo
+```mermaid
+flowchart LR
+    S["Sondeos"] --> N["Modelo nacional<br/>(Kalman + efectos casa)"]
+    R["Resultados 2019N / 2023<br/>+ europeas 2024"] --> T["Modelo territorial<br/>(σ calibrada)"]
+    N --> T
+    B["BOE<br/>(escaños, candidaturas)<br/>+ INE (censo)"] --> M
+    T --> M["Simulación<br/>(20 000 mundos)"]
+    M --> L["Reparto legal exacto<br/>(3 % + D'Hondt, art. 163)"]
+    L --> E["E_p,c<br/>Estimador condicional<br/>Rao-Blackwell<br/>+ contraste<br/>Monte Carlo directo"]
 ```
 
 ## Requisitos
