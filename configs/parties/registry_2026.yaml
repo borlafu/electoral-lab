@@ -1,0 +1,145 @@
+# Registro de partidos para las generales del 29-N-2026.
+#
+# Cada entidad modelable tiene:
+#   poll_labels      etiquetas usadas en las tablas de sondeos (comparación exacta, sin mayúsculas)
+#   candidacy        expresiones regulares (sobre el nombre proclamado en el BOE, en mayúsculas)
+#   bloc             bloque ideológico para el error correlacionado (left / right / regional)
+#   base             cómo construir su perfil territorial desde elecciones anteriores
+#
+# Las candidaturas que no casan con ninguna entidad se agregan como OTROS (sin opción a escaño),
+# salvo las listas locales con historial relevante, declaradas en local_parties.
+election: congreso_2026
+
+parties:
+  PP:
+    name: Partido Popular
+    color: "#1d84ce"
+    bloc: right
+    poll_labels: [PP]
+    candidacy: ['\(PP\)', 'PARTIDO POPULAR', 'UPN-PP']
+    base: {congreso_2023: [PP, UPN], congreso_2019n: [PP, PP–Foro, NA+]}
+  PSOE:
+    name: PSOE (incl. PSC, PSdeG, PSE-EE, PSN, PSIB)
+    color: "#e30613"
+    bloc: left
+    poll_labels: [PSOE]
+    candidacy: ['PSOE', 'SOCIALISTA', 'SOCIALISTES']
+    base: {congreso_2023: [PSOE, PSC–PSOE, PSIB–PSOE, PSN–PSOE, PSdeG–PSOE, PSE–EE (PSOE)],
+           congreso_2019n: [PSOE, PSC–PSOE, PSIB–PSOE, PSN–PSOE, PSdeG–PSOE, PSE–EE (PSOE)]}
+  VOX:
+    name: Vox
+    color: "#63be21"
+    bloc: right
+    poll_labels: [Vox]
+    candidacy: ['^VOX']
+    base: {congreso_2023: [Vox], congreso_2019n: [Vox]}
+  FA:
+    name: Frente Amplio (y coaliciones territoriales)
+    color: "#d6156c"
+    bloc: left
+    poll_labels: [FA, Broad Front]
+    candidacy: ['FRENTE AMPLI', 'FRONT AMPLI', 'FRENTE AMPLIU', 'ARAMÉS', 'UNIDAD DEL PUEBLO CANARIO']
+    base: {congreso_2023: {sumar_split: fa}}
+  FV:
+    name: "Compromís: Front Valencià"
+    color: "#f39200"
+    bloc: left
+    poll_labels: [FV, Valencian Front, Compromís]
+    candidacy: ['COMPROM[IÍ]S']
+    base: {congreso_2023: {sumar_split: all}}
+  PODEMOS:
+    name: Podemos
+    color: "#6b2e68"
+    bloc: left
+    poll_labels: [Podemos]
+    candidacy: ['^PODEMOS']
+    base: {congreso_2023: {sumar_split: podemos}}
+  SALF:
+    name: Se Acabó La Fiesta
+    color: "#8b4513"
+    bloc: right
+    poll_labels: [SALF]
+    candidacy: ['SE ACAB[OÓ] LA FIESTA']
+    base: {ep_2024: SALF}
+  ERC:
+    name: Esquerra Republicana de Catalunya
+    color: "#ffb232"
+    bloc: regional
+    poll_labels: [ERC]
+    candidacy: ['^ESQUERRA REPUBLICANA']
+    base: {congreso_2023: [ERC], congreso_2019n: [ERC–Sobiranistes]}
+  JUNTS:
+    name: Junts per Catalunya
+    color: "#20c0b2"
+    bloc: regional
+    poll_labels: [Junts]
+    candidacy: ['JUNTS PER CATALUNYA']
+    base: {congreso_2023: [Junts], congreso_2019n: [JxCat–Junts]}
+  BILDU:
+    name: EH Bildu
+    color: "#00d0b6"
+    bloc: regional
+    poll_labels: [EH Bildu, Bildu]
+    candidacy: ['EUSKAL HERRIA BILDU']
+    base: {congreso_2023: [EH Bildu], congreso_2019n: [EH Bildu]}
+  PNV:
+    name: EAJ-PNV
+    color: "#4aae4a"
+    bloc: regional
+    poll_labels: [PNV, EAJ/PNV, EAJ-PNV]
+    candidacy: ['EAJ-PNV', 'NACIONALISTA VASCO']
+    base: {congreso_2023: [EAJ/PNV], congreso_2019n: [EAJ/PNV]}
+  BNG:
+    name: Bloque Nacionalista Galego
+    color: "#76b3dd"
+    bloc: regional
+    poll_labels: [BNG]
+    candidacy: ['BLOQUE NACIONALISTA GALEGO']
+    base: {congreso_2023: [BNG], congreso_2019n: [BNG]}
+  CCA:
+    name: Coalición Canaria
+    color: "#ffd700"
+    bloc: regional
+    poll_labels: [CCa, CC]
+    candidacy: ['COALICI[OÓ]N CANARIA']
+    base: {congreso_2023: [CCa], congreso_2019n: [CCa–PNC–NC]}
+  ADELANTE:
+    name: Adelante Andalucía
+    color: "#00a650"
+    bloc: left
+    poll_labels: [Adelante, Adelante Andalucía, Adelante Andalucía (2021), AA]
+    candidacy: ['ADELANTE ANDALUC']
+    base: {uniform_in_ccaa: "01"}
+
+# Etiquetas de sondeo sin entidad propia en 2026. 'Sumar' (tablas anteriores a la creación del
+# Frente Amplio) se interpreta como el espacio FA + Compromís; véase models/national.py.
+poll_extra_labels: {Sumar: SUMAR}
+
+# Agrupación nacional: FA y Compromís-Front Valencià no concurren en las mismas provincias,
+# así que el agregador de sondeos estima su suma y el modelo territorial la reparte.
+national_groups: {FA: FA_FV, FV: FA_FV}
+
+# Etiquetas de 2023 que forman la «familia Sumar» y que se reparten entre FA / Podemos / Compromís.
+sumar_family:
+  congreso_2023: [Sumar, Sumar Aragón, Sumar–Compromís, Sumar–ECP, Més–MxMe–Sumar, NC–BC]
+  congreso_2019n: [Podemos–IU, Podemos–IULV–CA, Podemos–EU, Podemos–EUIB, Podemos–EUPV, Podemos–IU–Batzarre,
+                   Podemos–IX, ECP–Guanyem el Canvi, Más País–Equo, Más País–Andalucía, Más País, Més Compromís,
+                   Más País–Compromís]
+
+# Listas provinciales sin sondeo nacional pero con historial competitivo (perfil = su resultado en 2023).
+local_parties:
+  SY:
+    name: Soria ¡Ya!
+    province: "42"
+    candidacy: ['SORIA ¡YA!']
+    base: {congreso_2023: [SY]}
+  EXISTE:
+    name: Teruel Existe
+    province: "44"
+    candidacy: ['TERUEL EXISTE']
+    base: {congreso_2023: [Existe], congreso_2019n: [¡TE!]}
+  GBAI:
+    name: Geroa Bai
+    province: "31"
+    candidacy: ['GEROA BAI']
+    base: {congreso_2023: [GBai]}

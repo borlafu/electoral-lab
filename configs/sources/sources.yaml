@@ -1,0 +1,38 @@
+# Catálogo de fuentes. Cada descarga se guarda en data/raw con hash SHA-256 y se registra en data/catalog.sqlite.
+# Jerarquía: oficial > estadística oficial > agregador secundario (Wikipedia) > manual.
+sources:
+  convocatoria:
+    tipo: oficial
+    descripcion: Real Decreto 806/2026 de convocatoria; anexo con escaños por circunscripción
+    url: https://www.boe.es/eli/es/rd/2026/10/05/806
+    tabla: constituencies_2026.csv
+  candidaturas:
+    tipo: oficial
+    descripcion: Candidaturas proclamadas por las juntas electorales provinciales (BOE 3-11-2026)
+    url: https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+    tabla: candidacies_2026.csv
+  censo:
+    tipo: estadistica_oficial
+    descripcion: Censo electoral (CER + CERA) por provincia, INE
+    url: https://www.ine.es/dyngs/Prensa/EG2026.pdf
+    tabla: censo_2026.csv
+  sondeos:
+    tipo: secundario
+    descripcion: Tabla de sondeos publicados (enlaza a cada encuesta original)
+    url: https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election
+    api: https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json
+    tabla: polls_national.csv
+  resultados_congreso:
+    tipo: secundario
+    descripcion: Resultados por circunscripción 2019N y 2023 (cuadrados y validados contra el reparto oficial)
+    url: https://en.wikipedia.org/wiki/Results_of_the_2023_Spanish_Congress_election
+    por_provincia: https://en.wikipedia.org/wiki/{wiki_en}_(Congress_of_Deputies_constituency)
+    tablas: [results_congreso.csv, totals_congreso.csv]
+    alternativa_oficial: >
+      ZIP del Ministerio del Interior (https://infoelectoral.interior.gob.es/es/elecciones-celebradas/area-de-descargas/)
+      importable con `electoral sources import-interior <zip> --election congreso_2023`.
+  europeas_2024:
+    tipo: secundario
+    descripcion: Europeas 2024 por provincia; se usa para repartir el voto de Sumar 2023 entre Sumar y Podemos
+    url: https://en.wikipedia.org/wiki/Results_of_the_2024_European_Parliament_election_in_Spain
+    tabla: ep2024_profile.csv

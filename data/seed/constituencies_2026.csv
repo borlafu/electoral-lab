@@ -1,0 +1,53 @@
+province,name_boe,seats,source_url
+02,Albacete,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+03,Alicante/Alacant,12,https://www.boe.es/eli/es/rd/2026/10/05/806
+04,Almería,6,https://www.boe.es/eli/es/rd/2026/10/05/806
+01,Araba/Álava,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+33,Asturias,7,https://www.boe.es/eli/es/rd/2026/10/05/806
+05,Ávila,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+06,Badajoz,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+07,Balears (Illes),8,https://www.boe.es/eli/es/rd/2026/10/05/806
+08,Barcelona,32,https://www.boe.es/eli/es/rd/2026/10/05/806
+48,Bizkaia,8,https://www.boe.es/eli/es/rd/2026/10/05/806
+09,Burgos,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+10,Cáceres,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+11,Cádiz,8,https://www.boe.es/eli/es/rd/2026/10/05/806
+39,Cantabria,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+12,Castellón/Castelló,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+13,Ciudad Real,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+14,Córdoba,6,https://www.boe.es/eli/es/rd/2026/10/05/806
+15,Coruña (A),8,https://www.boe.es/eli/es/rd/2026/10/05/806
+16,Cuenca,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+20,Gipuzkoa,6,https://www.boe.es/eli/es/rd/2026/10/05/806
+17,Girona,6,https://www.boe.es/eli/es/rd/2026/10/05/806
+18,Granada,7,https://www.boe.es/eli/es/rd/2026/10/05/806
+19,Guadalajara,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+21,Huelva,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+22,Huesca,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+23,Jaén,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+24,León,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+25,Lleida,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+27,Lugo,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+28,Madrid,38,https://www.boe.es/eli/es/rd/2026/10/05/806
+29,Málaga,11,https://www.boe.es/eli/es/rd/2026/10/05/806
+30,Murcia,10,https://www.boe.es/eli/es/rd/2026/10/05/806
+31,Navarra,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+32,Ourense,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+34,Palencia,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+35,Palmas (Las),8,https://www.boe.es/eli/es/rd/2026/10/05/806
+36,Pontevedra,7,https://www.boe.es/eli/es/rd/2026/10/05/806
+26,Rioja (La),4,https://www.boe.es/eli/es/rd/2026/10/05/806
+37,Salamanca,4,https://www.boe.es/eli/es/rd/2026/10/05/806
+38,Santa Cruz de Tenerife,7,https://www.boe.es/eli/es/rd/2026/10/05/806
+40,Segovia,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+41,Sevilla,12,https://www.boe.es/eli/es/rd/2026/10/05/806
+42,Soria,2,https://www.boe.es/eli/es/rd/2026/10/05/806
+43,Tarragona,6,https://www.boe.es/eli/es/rd/2026/10/05/806
+44,Teruel,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+45,Toledo,6,https://www.boe.es/eli/es/rd/2026/10/05/806
+46,Valencia/València,16,https://www.boe.es/eli/es/rd/2026/10/05/806
+47,Valladolid,5,https://www.boe.es/eli/es/rd/2026/10/05/806
+49,Zamora,3,https://www.boe.es/eli/es/rd/2026/10/05/806
+50,Zaragoza,7,https://www.boe.es/eli/es/rd/2026/10/05/806
+51,Ceuta,1,https://www.boe.es/eli/es/rd/2026/10/05/806
+52,Melilla,1,https://www.boe.es/eli/es/rd/2026/10/05/806

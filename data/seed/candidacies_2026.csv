@@ -1,0 +1,556 @@
+province_raw,order,name,proclaimed,province,party_id,source_url
+Albacete,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,02,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,2,FRENTE OBRERO (FO),True,02,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,3,SE ACABÓ LA FIESTA (SALF),True,02,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,4,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,02,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,5,VOX (VOX),True,02,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,6,PODEMOS (PODEMOS),True,02,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,02,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,8,PARTIDO POPULAR (PP),True,02,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Albacete,9,Frente Amplio (FA),True,02,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,03,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,2,FRENTE OBRERO (FO),True,03,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,3,PARTIDO AUTÓNOMOS (PARTIDO AUTÓNOMOS),True,03,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,4,SE ACABÓ LA FIESTA (SALF),True,03,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,03,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,6,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),True,03,FV,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,7,VOX (VOX),True,03,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,8,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,03,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,9,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),False,03,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Alicante,10,PARTIDO POPULAR (PP),True,03,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,04,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,2,FRENTE OBRERO (FO),True,04,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,3,SE ACABÓ LA FIESTA (SALF),True,04,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,4,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,04,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,5,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,04,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,6,VOX (VOX),True,04,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,7,PARTIDO POPULAR (PP),True,04,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,8,IZQUIERDA POR ALMERÍA (I.P.A.L.),False,04,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,9,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,04,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,10,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,04,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,11,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,04,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,12,PODEMOS (PODEMOS),True,04,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Almería,13,Frente Amplio (FA),True,04,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,1,PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) PSE-EE (PSOE),True,01,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,2,EUSKAL HERRIA BILDU (EH BILDU),True,01,BILDU,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,3,EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO (EAJ-PNV),True,01,PNV,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,4,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,01,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,5,VOX (VOX),True,01,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,6,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,01,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,7,PODEMOS (PODEMOS),True,01,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,8,PARTIDO COMUNISTA DE LOS TRABAJADORES DE EUSKADI/EUSKADIKO LANGILEEN ALDERDI KOMUNISTA (PCTE/ELAK),True,01,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,9,SE ACABÓ LA FIESTA (SALF),True,01,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,10,FRENTE OBRERO (FO),True,01,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,11,PARTIDO POPULAR (PP),True,01,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,12,FRENTE AMPLIO-FRONTE ZABALA (FRENTE AMPLIO-FRONTE ZABALA),True,01,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,13,FEMINISTAS AL CONGRESO (PFAC),True,01,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,14,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,01,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Álava,15,JUSTICIA Y LEY (JL),False,01,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,1,FRENTE OBRERO (FO),True,33,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,33,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,3,SE ACABÓ LA FIESTA (SALF),True,33,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,4,VOX (VOX),True,33,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,5,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,33,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,6,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,33,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,7,PODEMOS (PODEMOS),True,33,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,8,PARTIDO UNIONISTA ESTADO DE ESPAÑA (PUEDE),True,33,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,9,PARTIDO POPULAR (PP),True,33,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,10,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,33,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Asturias,11,FRENTE AMPLIU POR ASTURIES (FA),True,33,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,05,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,2,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,05,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,3,SE ACABÓ LA FIESTA (SALF),True,05,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,4,FRENTE OBRERO (FO),True,05,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,05,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,6,VOX (VOX),True,05,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,7,PODEMOS (PODEMOS),True,05,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,8,PARTIDO POPULAR (PP),True,05,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,9,PARTIDO DEMÓCRATA SOCIAL JUBILADOS EUROPEOS (P.D.S.J.E.),True,05,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ávila,10,Frente Amplio (FA),True,05,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,06,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,2,SE ACABÓ LA FIESTA (SALF),True,06,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,3,VOX (VOX),True,06,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,4,FRENTE OBRERO (FO),True,06,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,5,NUEVO EXTREMEÑISMO -ADELANTE EXTREMADURA (NEX),True,06,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,6,PARTIDO POPULAR (PP),True,06,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,7,Frente Amplio (FA),True,06,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,8,JUNTOS POR EXTREMADURA (J.U.E.X.),False,06,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,9,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,06,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Badajoz,10,PODEMOS (PODEMOS),True,06,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,1,FRENTE OBRERO (FO),True,07,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,2,PARTIDO SOCIALISTA DE LAS ISLAS BALEARES (PSIB-PSOE),True,07,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,3,VOX (VOX),True,07,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,4,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),False,07,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,07,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,6,SE ACABÓ LA FIESTA (SALF),True,07,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,7,PARTIDO POPULAR (PP),True,07,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Illes Balears,8,ARAMÉS-FRONT AMPLI (ARAMÉS-EU-MS),True,07,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,1,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),True,08,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,2,JUNTS PER CATALUNYA (JxCat),True,08,JUNTS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,3,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),True,08,ERC,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,4,FRENTE OBRERO (FO),True,08,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,5,SE ACABÓ LA FIESTA (SALF),True,08,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,6,PARTIT COMUNISTA DELS TREBALLADORS DE CATALUNYA (PCTC),True,08,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,7,VOX (VOX),True,08,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,8,Comuns-Front Ampli (COMUNS-FRONT AMPLI),True,08,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,9,PARTIT POPULAR / PARTIDO POPULAR (PP),True,08,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,10,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),False,08,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,11,DEMOCRACIA para el siglo 21 (D21),True,08,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,12,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),False,08,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Barcelona,13,ALHORA (ALHORA),True,08,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,1,EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO (EAJ-PNV),True,48,PNV,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,2,PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) PSE-EE (PSOE),True,48,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,3,EUSKAL HERRIA BILDU (EH Bildu),True,48,BILDU,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,4,PARTIDO COMUNISTA DE LOS TRABAJADORES DE EUSKADI/EUSKADIKO LANGILEEN ALDERDI KOMUNISTA (PCTE/ELAK),True,48,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,5,VOX (VOX),True,48,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,6,FRENTE AMPLIO (FA),True,48,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,7,PODEMOS (PODEMOS),True,48,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,8,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,48,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,9,FRENTE OBRERO (FO),True,48,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,10,PARTIDO POPULAR (PP),True,48,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,11,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,48,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Bizkaia,12,FEMINISTAS AL CONGRESO (PFAC),False,48,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,1,FRENTE OBRERO (FO),True,09,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,09,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,3,SE ACABÓ LA FIESTA (SALF),True,09,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,4,PODEMOS (PODEMOS),True,09,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,5,VOX (VOX),True,09,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,6,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,09,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,7,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,09,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,8,PARTIDO POPULAR (PP),True,09,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Burgos,9,Frente Amplio (FA),True,09,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,10,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,2,SE ACABÓ LA FIESTA (SALF),True,10,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,3,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,10,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,4,VOX (VOX),True,10,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,5,FRENTE OBRERO (FO),True,10,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,6,PARTIDO POPULAR (PP),True,10,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,7,JUNTOS POR EXTREMADURA (J.U.E.X.),False,10,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,8,PODEMOS (PODEMOS),True,10,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,9,Frente Amplio (FA),True,10,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cáceres,10,NUEVO EXTREMEÑISMO -ADELANTE EXTREMADURA (NEX),True,10,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,11,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,2,FRENTE OBRERO (FO),True,11,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,3,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,11,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,4,SE ACABÓ LA FIESTA (SALF),True,11,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,11,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,6,VOX (VOX),True,11,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,11,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,8,Frente Amplio Andaluz (FA),True,11,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,9,PODEMOS (PODEMOS),True,11,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,10,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,11,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cádiz,11,PARTIDO POPULAR (PP),True,11,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cantabria,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,39,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cantabria,2,FRENTE OBRERO (FO),True,39,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cantabria,3,PODEMOS (PODEMOS),True,39,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cantabria,4,VOX (VOX),True,39,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cantabria,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,39,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cantabria,6,PARTIDO POPULAR (PP),True,39,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cantabria,7,FRENTE AMPLIO (FA),True,39,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,12,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,2,PARTIDO AUTÓNOMOS (PARTIDO AUTÓNOMOS),True,12,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,3,FRENTE OBRERO (FO),True,12,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,4,SE ACABÓ LA FIESTA (SALF),True,12,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,12,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,6,VOX (VOX),True,12,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,7,FALANGE ESPAÑOLA DE LAS JONS (FE de las JONS),True,12,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,8,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),True,12,FV,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,9,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,12,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Castellón,10,PARTIDO POPULAR (PP),True,12,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ciudad Real,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,13,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ciudad Real,2,FRENTE OBRERO (FO),True,13,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ciudad Real,3,VOX (VOX),True,13,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ciudad Real,4,PODEMOS (PODEMOS),True,13,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ciudad Real,5,PARTIDO POPULAR (PP),True,13,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ciudad Real,6,Frente Amplio (FA),True,13,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,14,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,2,FRENTE OBRERO (FO),True,14,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,3,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,14,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,4,SE ACABÓ LA FIESTA (SALF),True,14,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,5,VOX (VOX),True,14,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,6,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,14,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,14,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,8,FALANGE ESPAÑOLA DE LAS JONS (FE de las JONS),True,14,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,9,PARTIDO POPULAR (PP),True,14,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,10,FRENTE AMPLIO ANDALUZ (FA),True,14,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,11,PODEMOS (PODEMOS),True,14,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Córdoba,12,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,14,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,1,Partido dos Socialistas de Galicia-PSOE (PSdeG-PSOE),True,15,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,2,VOX (VOX),True,15,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,3,PARTIDO POPULAR (PP),True,15,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,4,SE ACABÓ LA FIESTA (SALF),True,15,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,5,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),False,15,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,6,PARTIDO COMUNISTA DOS TRABALLADORES DA GALIZA (PCTG),True,15,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,7,BLOQUE NACIONALISTA GALEGO (B.N.G.),True,15,BNG,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,8,FRENTE OBRERO (FO),True,15,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,9,PODEMOS (PODEMOS),True,15,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+A Coruña,10,Frente Amplio-Fronte Ampla (FRENTE AMPLIO-FRONTE AMPLA),True,15,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,1,FRENTE OBRERO (FO),True,16,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,16,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,3,SE ACABÓ LA FIESTA (SALF),True,16,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,4,VOX (VOX),True,16,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,16,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,6,PODEMOS (PODEMOS),True,16,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,7,PARTIDO POPULAR (PP),True,16,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,8,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,16,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,9,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,16,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Cuenca,10,FRENTE AMPLIO (FA),True,16,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,1,EUSKAL HERRIA BILDU (EH BILDU),True,20,BILDU,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,2,PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) PSE-EE (PSOE),True,20,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,3,EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO (EAJ-PNV),True,20,PNV,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,4,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,20,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,5,FRENTE OBRERO (FO),True,20,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,6,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,20,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,7,VOX (VOX),True,20,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,8,PODEMOS (PODEMOS),True,20,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,9,PARTIDO POPULAR (PP),True,20,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,10,EUSKADIKO LANGILEEN ALDERDI KOMUNISTA/PARTIDO COMUNISTA DE LOS TRABAJADORES DE EUSKADI (ELAK/PCTE),True,20,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Gipuzkoa,11,Frente Amplio (FA),True,20,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,1,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),True,17,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,2,FRENTE OBRERO (FO),True,17,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,3,JUNTS PER CATALUNYA (JxCat),True,17,JUNTS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,4,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),True,17,ERC,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,5,Comuns-Front Ampli (COMUNS-FRONT AMPLI),True,17,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,6,PARTIT COMUNISTA DELS TREBALLADORS DE CATALUNYA (PCTC),True,17,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,17,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,8,VOX (VOX),True,17,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,9,ALHORA (ALHORA),True,17,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Girona,10,PARTIT POPULAR / PARTIDO POPULAR (PP),True,17,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,1,FRENTE OBRERO (FO),True,18,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,18,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,3,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,18,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,4,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,18,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,5,SE ACABÓ LA FIESTA (SALF),True,18,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,6,VOX (VOX),True,18,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,18,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,8,PODEMOS (PODEMOS),True,18,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,9,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,18,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,10,PARTIDO POPULAR (PP),True,18,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Granada,11,Frente Amplio Andaluz (FA),True,18,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,1,FRENTE OBRERO (FO),True,19,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,2,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,19,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,3,SE ACABÓ LA FIESTA (SALF),True,19,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,4,VOX (VOX),True,19,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,5,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,19,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,6,FRENTE AMPLIO (FA),True,19,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,7,PODEMOS (PODEMOS),True,19,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,8,PARTIDO POPULAR (PP),True,19,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,9,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,19,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Guadalajara,10,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),True,19,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,1,FRENTE OBRERO (FO),True,21,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,2,PARTIDO SOCIALISTA DE HUELVA (PSOE),True,21,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,3,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,21,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,4,VOX (VOX),True,21,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,21,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,6,PARTIDO POPULAR (PP),True,21,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,7,Frente Amplio Andaluz (FA),True,21,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,8,SE ACABÓ LA FIESTA (SALF),True,21,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,9,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,21,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huelva,10,PODEMOS (PODEMOS),True,21,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,22,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,2,FRENTE OBRERO (FO),True,22,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,3,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,22,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,4,VOX (VOX),True,22,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,5,SE ACABÓ LA FIESTA (SALF),True,22,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,6,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,22,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,7,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,22,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,8,PODEMOS (PODEMOS),True,22,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,9,PARTIDO POPULAR (PP),True,22,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,10,CHUNTA ARAGONESISTA-FRENTE AMPLIO ARAGÓN (CHA-IU-MS-FRENTE AMPLIO),True,22,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Huesca,11,FEDERACION DE LOS INDEPENDIENTES DE ARAGON (FIA),True,22,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,1,FRENTE OBRERO (FO),True,23,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,23,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,3,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,23,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,4,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,23,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,5,SE ACABÓ LA FIESTA (SALF),True,23,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,6,VOX (VOX),True,23,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,23,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,8,PARTIDO POPULAR (PP),True,23,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,9,PODEMOS (PODEMOS),True,23,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,10,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,23,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Jaén,11,FRENTE AMPLIO (FA),True,23,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,24,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,2,FRENTE OBRERO (FO),True,24,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,3,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,24,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,4,SE ACABÓ LA FIESTA (SALF),True,24,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,5,PROYECTO ALANTRE (P. ALANTRE),True,24,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,6,VOX (VOX),True,24,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,7,PARTIDO REGIONALISTA DEL PAIS LEONES (PREPAL),True,24,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,8,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,24,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,9,PODEMOS (PODEMOS),True,24,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,10,PARTIDO POPULAR (PP),True,24,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,11,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),False,24,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,12,Frente Amplio (FA),True,24,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+León,13,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,24,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,1,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),True,25,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,2,JUNTS PER CATALUNYA (JxCat),True,25,JUNTS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,3,FRENTE OBRERO (FO),True,25,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,4,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),True,25,ERC,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,5,Comuns-Front Ampli (COMUNS-FRONT AMPLI),True,25,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,6,PARTIT COMUNISTA DELS TREBALLADORS DE CATALUNYA (PCTC),True,25,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,7,VOX (VOX),True,25,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,8,PARTIT ANIMALISTA AMB EL MEDI AMBIENT (PACMA),True,25,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,9,PARTIDO POPULAR (PP),True,25,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lleida,10,ALHORA (ALHORA),True,25,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,1,PARTIDO DOS SOCIALISTAS DE GALICIA-PSOE (PSdeG-PSOE),True,27,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,2,PODEMOS (PODEMOS),True,27,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,3,VOX (VOX),True,27,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,4,FRENTE OBRERO (FO),True,27,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,5,BLOQUE NACIONALISTA GALEGO (BNG),True,27,BNG,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,6,PARTIDO POPULAR (PP),True,27,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,7,FRENTE AMPLIO-FRONTE AMPLA (FRENTE AMPLIO-FRONTE AMPLA),True,27,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Lugo,8,SE ACABÓ LA FIESTA (SALF),True,27,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,1,FRENTE OBRERO (FO),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,28,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,3,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,4,VOX (VOX),True,28,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,6,PARTIDO HUMANISTA (PH),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,7,DEMOCRACIA PARA EL SIGLO 21 (D21),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,8,IUSTITIA EUROPA (IE),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,9,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,10,SE ACABÓ LA FIESTA (SALF),True,28,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,11,PARTIDO POPULAR (PP),True,28,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,12,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,28,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,13,Frente Amplio (FA),True,28,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Madrid,14,PODEMOS (PODEMOS),True,28,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,1,FRENTE OBRERO (FO),True,29,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,29,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,3,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,29,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,4,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,29,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,5,VOX (VOX),True,29,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,6,SE ACABÓ LA FIESTA (SALF),True,29,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,7,PARTIDO POPULAR (PP),True,29,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,8,ALTERNATIVA MALAGUEÑA (29),True,29,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,9,José María Calvo Guerra,False,29,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,10,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,29,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,11,PODEMOS (PODEMOS),True,29,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Málaga,12,Frente Amplio (FA),True,29,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,1,FRENTE OBRERO (FO),True,30,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,30,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,3,TERCERA EDAD EN ACCIÓN (3e),True,30,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,4,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,30,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,5,VOX (VOX),True,30,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,6,SE ACABÓ LA FIESTA (SALF),True,30,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,7,PARTIDO POPULAR (PP),True,30,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,8,PODEMOS (PODEMOS),True,30,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,9,UNION CARTAGINENSE (UC),False,30,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,10,Frente Amplio (FA),True,30,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,11,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,30,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Murcia,12,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),False,30,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,1,EUSKAL HERRIA BILDU-ESQUERRA REPUBLICANA DE CATALUNYA (EH BILDU-ERC),True,31,BILDU,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,2,FRENTE OBRERO (FO),True,31,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,3,PARTIDO SOCIALISTA DE NAVARRA-PSOE (PSN-PSOE),True,31,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,4,EGUZKILORE (EGUZKILORE),True,31,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,5,GEROA BAI (GBAI),True,31,GBAI,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,6,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,31,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,7,UNIÓN DEL PUEBLO NAVARRO EN COALICIÓN CON EL PARTIDO POPULAR (UPN-PP),True,31,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,8,SE ACABÓ LA FIESTA (SALF),True,31,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,9,VOX (VOX),True,31,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,10,PODEMOS (PODEMOS),True,31,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,11,Frente Amplio-Fronte Zabala (FRENTE AMPLIO-FRONTE ZABALA),True,31,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,12,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,31,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Navarra,13,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,31,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,1,Partido dos Socialistas de Galicia-PSOE (PSdeG-PSOE),True,32,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,2,FRENTE OBRERO (FO),True,32,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,3,PARTIDO COMUNISTA DOS TRABALLADORES DA GALIZA (PCTG),True,32,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,4,PODEMOS (PODEMOS),True,32,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,5,VOX (VOX),True,32,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,6,SE ACABÓ LA FIESTA (SALF),True,32,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,7,PARTIDO POPULAR (PP),True,32,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,8,BLOQUE NACIONALISTA GALEGO (BNG),True,32,BNG,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,9,POR UN MUNDO MAIS XUSTO (MUNDO+JUSTO),True,32,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,10,Frente Amplio-Fronte Ampla (FRENTE AMPLIO-FRONTE AMPLA),True,32,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ourense,11,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),False,32,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,34,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,2,SE ACABÓ LA FIESTA (SALF),True,34,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,3,VOX (VOX),True,34,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,4,PODEMOS (PODEMOS),True,34,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,5,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),True,34,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,6,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,34,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,7,FRENTE OBRERO (FO),True,34,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,8,PARTIDO POPULAR (PP),True,34,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,9,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,34,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,10,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,34,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Palencia,11,Frente Amplio (FA),True,34,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,35,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,2,LIBERACIÓN CANARIA (LIB),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,3,PARTIDO POPULAR (PP),True,35,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,4,PARTIDO DRAGO CANARIAS (D.R.G),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,5,FRENTE OBRERO (FO),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,6,VOX (VOX),True,35,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,7,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,8,MUNICIPALISTAS PRIMERO CANARIAS-COALICIÓN CANARIA (1.ºCAN-CCa),True,35,CCA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,9,SE ACABÓ LA FIESTA (SALF),True,35,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,10,POR UN MUNDO MÁS JUSTO (MUNDO+JUSTO),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,11,"UNIDAD DEL PUEBLO CANARIO UPC (NC-BC, PODEMOS, IU, SUMAR)",True,35,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,12,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,13,PARTIDO COMUNISTA DEL PUEBLO CANARIO (PCPC),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Las Palmas,14,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,35,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,1,Frente Obrero (FO),True,36,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,2,VOX (VOX),True,36,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,3,Partido Comunista dos Traballadores da Galiza (PCTG),True,36,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,4,Partido dos Socialistas de Galicia-PSOE (PSdeG-PSOE),True,36,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,5,Escanos en Branco para deixar Escanos Baleiros (ESCAÑOS EN BLANCO),True,36,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,6,Partido Popular (PP),True,36,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,7,Frente Amplio -Fronte Ampla (FRENTE AMPLIO -FRONTE AMPLA),True,36,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,8,BLOQUE NACIONALISTA GALEGO (BNG),True,36,BNG,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,9,SE ACABÓ LA FIESTA (SALF),True,36,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Pontevedra,10,PODEMOS (PODEMOS),True,36,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,26,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,2,FRENTE OBRERO (FO),True,26,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,3,SE ACABO LA FIESTA (SALF),True,26,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,4,FRENTE AMPLIO (FA),True,26,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,5,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,26,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,6,VOX,True,26,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,7,PODEMOS,True,26,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,8,PARTIDO POPULAR (PP),True,26,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,9,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACIOS (ESCAÑOS EN BLANCO),True,26,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+La Rioja,10,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,26,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,1,FRENTE OBRERO (FO),True,37,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,37,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,3,PODEMOS (PODEMOS),True,37,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,4,SE ACABÓ LA FIESTA (SALF),True,37,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,5,VOX (VOX),True,37,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,6,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),False,37,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,7,PARTIDO REGIONALISTA DEL PAIS LEONES (PREPAL),True,37,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,8,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,37,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,9,PARTIDO POPULAR (PP),True,37,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Salamanca,10,Frente Amplio (FA),True,37,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,38,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,2,Coalición Canaria-Municipalistas Primero Canarias (CCa-1.ºCAN),True,38,CCA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,3,PARTIDO POPULAR (PP),True,38,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,4,PARTIDO DRAGO CANARIAS (D.R.G),True,38,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,5,SE ACABÓ LA FIESTA (SALF),True,38,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,6,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,38,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,7,FRENTE OBRERO (FO),True,38,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,8,VOX (VOX),True,38,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,9,"UNIDAD DEL PUEBLO CANARIO UPC (NC-BC, PODEMOS, IU, SUMAR)",True,38,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,10,LIBERACIÓN CANARIA (LIB),True,38,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,11,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,38,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,12,PARTIDO AUTÓNOMOS (PARTIDO AUTÓNOMOS),True,38,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Santa Cruz de Tenerife,13,FEMINISM8 (F8),False,38,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,1,FRENTE OBRERO (FO),True,40,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,40,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,3,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,40,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,4,SE ACABÓ LA FIESTA (SALF),True,40,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,5,VOX (VOX),True,40,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,6,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,40,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,7,PODEMOS (PODEMOS),True,40,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,8,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,40,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,9,Frente Amplio (FA),True,40,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Segovia,10,PARTIDO POPULAR (PP),True,40,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,1,FRENTE OBRERO (FO),True,41,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,41,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,3,ADELANTE ANDALUCÍA (ADELANTE ANDALUCÍA),True,41,ADELANTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,4,SE ACABÓ LA FIESTA (SALF),True,41,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,5,VOX (VOX),True,41,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,6,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,41,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,41,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,8,PODEMOS (PODEMOS),True,41,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,9,Frente Amplio Andaluz (FA),True,41,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,10,PARTIDO POPULAR (PP),True,41,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Sevilla,11,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,41,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,1,FRENTE OBRERO (FO),True,42,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,2,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,42,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,3,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,42,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,4,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,42,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,5,SE ACABÓ LA FIESTA (SALF),True,42,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,6,VOX (VOX),True,42,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,7,SORIA ¡YA! (SY),True,42,SY,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,8,Frente Amplio (FA),True,42,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,9,PARTIDO POPULAR (PP),True,42,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,10,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,42,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Soria,11,PODEMOS (PODEMOS),True,42,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,1,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),True,43,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,2,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),True,43,ERC,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,3,FRENTE OBRERO (FO),True,43,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,4,JUNTS PER CATALUNYA (JxCat),True,43,JUNTS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,5,PARTIT COMUNISTA DELS TREBALLADORS DE CATALUNYA (PCTC),True,43,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,6,SE ACABÓ LA FIESTA (SALF),True,43,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,7,Comuns-Front Ampli (COMUNS-FRONT AMPLI),True,43,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,8,VOX (VOX),True,43,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,9,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,43,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,10,CONVERGENTS (CNV),True,43,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,11,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,43,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,12,PARTIT POPULAR / PARTIDO POPULAR (PP),True,43,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Tarragona,13,ALHORA (ALHORA),True,43,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,44,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,2,FRENTE OBRERO (FO),True,44,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,3,VOX (VOX),True,44,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,4,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,44,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,5,SE ACABÓ LA FIESTA (SALF),True,44,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,6,TERUEL EXISTE (TERUEL EXISTE),True,44,EXISTE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,7,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),True,44,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,8,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,44,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,9,PARTIDO POPULAR (PP),True,44,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Teruel,10,PODEMOS (PODEMOS),True,44,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,45,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,2,FRENTE OBRERO (FO),True,45,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,3,SE ACABÓ LA FIESTA (SALF),True,45,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,4,VOX (VOX),True,45,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,5,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),True,45,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,6,PARTIDO POPULAR (PP),True,45,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,7,PODEMOS (PODEMOS),True,45,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,8,Frente Amplio (FA),True,45,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Toledo,9,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,45,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,46,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,2,FRENTE OBRERO (FO),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,3,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,4,VOX (VOX),True,46,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,5,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),True,46,FV,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,6,SE ACABÓ LA FIESTA (SALF),True,46,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,8,PARTIDO AUTÓNOMOS (PARTIDO AUTÓNOMOS),False,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,9,VALENCIA UNIDA (VLC),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,10,RENACER RENAIXER (RRB),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,11,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,12,PARTIDO POPULAR (PP),True,46,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,13,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valencia,14,AGENDA VALENCIANA (AGENDA VALENCIANA),True,46,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,47,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,2,FRENTE OBRERO (FO),True,47,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,3,SE ACABÓ LA FIESTA (SALF),True,47,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,4,PARTIDO NACIONALISTA DE CASTILLA Y LEÓN -UNION REFORMISTA CIUDADANA (PANCAL-URCI),True,47,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,5,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,47,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,6,VOX (VOX),True,47,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,7,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),True,47,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,8,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),True,47,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,9,PODEMOS (PODEMOS),True,47,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,10,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,47,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,11,PARTIDO POPULAR (PP),True,47,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,12,Frente Amplio (FA),True,47,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Valladolid,13,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),True,47,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,49,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,2,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,49,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,3,PARTIDO REGIONALISTA DEL PAIS LEONES (PREPAL),True,49,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,4,SE ACABÓ LA FIESTA (SALF),True,49,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,5,VOX (VOX),True,49,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,6,PODEMOS (PODEMOS),True,49,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,7,PARTIDO POPULAR (PP),True,49,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,8,FRENTE OBRERO (FO),True,49,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zamora,9,Frente Amplio (FA),True,49,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,1,FRENTE OBRERO (FO),True,50,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,50,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,3,PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA (PCTE),True,50,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,4,POR UN MUNDO MAS JUSTO (MUNDO+JUSTO),True,50,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,5,VOX (VOX),True,50,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,6,PODEMOS (PODEMOS),True,50,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,7,FEDERACION DE LOS INDEPENDIENTES DE ARAGON (F.I.A.),True,50,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,8,PARTIDO POPULAR (PP),True,50,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,9,PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE (PACMA),False,50,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,10,Chunta Aragonesista-Frente Amplio Aragón (CHA-IU-MS-FRENTE AMPLIO),True,50,FA,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,11,SE ACABÓ LA FIESTA (SALF),True,50,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Zaragoza,12,FALANGE ESPAÑOLA DE LAS J.O.N.S. (FE de las JONS),False,50,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ceuta,1,PARTIDO POPULAR (PP),True,51,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ceuta,2,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,51,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ceuta,3,VOX (VOX),True,51,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ceuta,4,"PODEMOS (PAZ,CASA Y TRABAJO)",True,51,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ceuta,5,SE ACABO LA FIESTA (SALF),True,51,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Ceuta,6,FRENTE OBRERO,True,51,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Melilla,1,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),True,52,PSOE,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Melilla,2,FRENTE OBRERO (FO),True,52,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Melilla,3,SE ACABÓ LA FIESTA (SALF),True,52,SALF,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Melilla,4,VOX (VOX),True,52,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Melilla,5,ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS (ESCAÑOS EN BLANCO),False,52,OTROS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf
+Melilla,6,PARTIDO POPULAR (PP),True,52,PP,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf

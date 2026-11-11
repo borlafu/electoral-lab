@@ -1,0 +1,42 @@
+# Configuración por defecto del modelo. Cada valor está documentado en docs/MODEL_CARD.md.
+election_date: 2026-11-29
+seed: 20261129
+n_sims: 20000
+
+national:
+  window_start: 2025-06-01        # sondeos anteriores se ignoran
+  min_obs_party: 8               # mínimo de sondeos para estimar un partido
+  n_cap: 2500                    # tamaño muestral máximo considerado
+  design_effect: 0.6             # n_eff = min(n, n_cap) * design_effect
+  default_n: 1000                # si el sondeo no publica muestra
+  exclude_pollsters: [PP, PSOE, Vox, Sumar, Podemos, ERC, Junts]  # sondeos internos de partidos
+  dedupe_tracking: true          # en encuestas diarias solapadas, solo olas no solapadas
+  bounds:                        # límites de los hiperparámetros (escala logit)
+    rw_sd_daily: [0.002, 0.03]
+    tau: [0.0, 0.25]
+    house_sd: [0.01, 0.30]
+  # Error sistemático del día de la elección (logit), además del error de muestreo/agregación.
+  # Calibrado de forma conservadora con el error medio histórico de las encuestas en España (~2 pp
+  # para los dos grandes). El bloque introduce correlación izquierda/derecha.
+  election_day_sd: 0.09
+  election_day_sd_small: 0.16    # partidos < 4 %
+  bloc_sd: 0.05
+  others_min: 0.008
+
+territorial:
+  base_election: congreso_2023
+  calib_election_pair: [congreso_2019n, congreso_2023]
+  ccaa_share_of_variance: 0.4    # fracción de la varianza local atribuida a un factor por CCAA
+  sd_floor: 0.06                 # desviación mínima (log) del error provincial
+  sd_cap: 0.6
+  local_party_sd: 0.30           # listas locales sin sondeo (Teruel Existe, Soria ¡Ya!, Geroa Bai)
+  turnout:
+    national_shift_sd: 0.12      # logit
+    province_sd: 0.05
+    blank_sd: 0.15               # log
+  calibration_iters: 8
+  sigma_scale: 1.0               # multiplicador de sensibilidad del error provincial
+
+pivotal:
+  method: conditional            # conditional (Rao-Blackwell) | direct
+  increments: [1, 10, 100, 1000]

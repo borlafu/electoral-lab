@@ -1,0 +1,13 @@
+# Parámetros legales de la elección (LOREG). Documentación: el motor los codifica en legal/allocation.py.
+election_id: congreso_2026
+fecha: 2026-11-29
+camara: congreso
+escaños_total: 350
+umbral_circunscripcion: 0.03        # art. 163.1.a LOREG: 3 % de los votos válidos (candidaturas + blanco)
+metodo: dhondt                       # art. 163.1.b-c
+empates: mayor_voto_total_y_sorteo   # art. 163.1.c: a igualdad de cociente, más votos totales; si persiste, sorteo
+uninominales:                        # art. 170 LOREG: Ceuta y Melilla, un diputado por mayoría simple
+  - "51"
+  - "52"
+voto_blanco_en_base_umbral: true
+voto_nulo_en_base_umbral: false
