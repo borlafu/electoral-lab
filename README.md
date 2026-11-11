@@ -210,3 +210,19 @@ Todos los parámetros están en `configs/models/default.yaml` y documentados en 
 uv run pytest -q
 uv run ruff check src tests
 ```
+
+## Aviso metodológico
+
+Las previsiones y estimaciones de `E_p,c` que produce esta herramienta dependen de los datos
+disponibles y de los supuestos del modelo (ver `docs/MODEL_CARD.md`). Están sujetas a
+incertidumbre, no tienen carácter oficial y no constituyen una recomendación de voto.
+
+## Licencia
+
+El código original de electoral-lab se distribuye bajo la licencia MIT.
+Consulta el archivo [LICENSE](LICENSE).
+
+Los datos y materiales de terceros (resultados oficiales, sondeos, normativa, etc.) conservan
+sus respectivas licencias y condiciones de reutilización; no quedan relicenciados bajo MIT por
+estar incluidos o ser descargados por este repositorio. Su procedencia, fecha de extracción y
+transformaciones se documentan en `docs/DATA_SOURCES.md`.
