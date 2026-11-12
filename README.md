@@ -1,9 +1,39 @@
 # electoral-lab
 
+<p align="center">
+  <img src="docs/img/valor-del-voto.jpg" width="480"
+       alt="Ilustración de una papeleta entrando en una urna ante el Congreso de los Diputados, con dos caminos hacia grupos de escaños. Texto: «España · Elecciones 29N. ¿Cuánto puede cambiar tu voto? No solo importa a quién. También dónde.»">
+</p>
+
 Laboratorio electoral local para las elecciones generales del **29 de noviembre de 2026** (Congreso).
 Obtiene datos oficiales y sondeos, modela la incertidumbre, simula resultados, aplica el reparto legal
 de la LOREG por circunscripción y estima **E_p,c**: la probabilidad de que **un voto adicional** a la
 candidatura *p* en la circunscripción *c* cambie la asignación de escaños.
+
+- **Demo**: [elecciones29n.streamlit.app](https://elecciones29n.streamlit.app/)
+- **Código**: este repositorio, bajo licencia MIT.
+
+## Motivación
+
+En cada campaña se repite la idea de que «los votos a ciertos partidos cuentan más». Unos lo atribuyen a
+D'Hondt; otros, a una supuesta ventaja de los partidos regionalistas. D'Hondt y el umbral del 3 % influyen,
+pero el punto de partida es otro: el Congreso no reparte los escaños con el total de votos de España, sino
+**circunscripción por circunscripción** (LOREG, arts. 161–163). Importa cuántos votos recibe un partido, pero también **dónde**.
+
+Un ejemplo ficticio: cuatro territorios eligen un diputado cada uno. El partido A recibe 3 millones de votos,
+750 000 en cada territorio, sin ganar en ninguno: obtiene 0 escaños. El partido B concentra 2 millones en dos
+territorios, un millón en cada uno, y gana ambos: obtiene 2 escaños con menos votos en total.
+
+Dividir votos entre escaños después de unas elecciones describe un resultado, pero no responde a la pregunta
+que interesa antes de votar: **¿qué probabilidad hay de que un voto más a una candidatura cambie un escaño
+en mi circunscripción?** electoral-lab intenta estimarlo de forma transparente y reproducible: combina
+sondeos y resultados anteriores, modela la incertidumbre, simula miles de escenarios y aplica en cada uno
+las reglas legales de reparto.
+
+Es un prototipo experimental y educativo. La cercanía a un escaño es solo un dato más: no sustituye las
+ideas, prioridades o programas que cada persona quiera apoyar, y **no es una recomendación de voto**.
+
+## Cómo funciona
 
 ```mermaid
 flowchart LR
@@ -15,6 +45,15 @@ flowchart LR
     M --> L["Reparto legal exacto<br/>(3 % + D'Hondt, art. 163)"]
     L --> E["E_p,c<br/>Estimador condicional<br/>Rao-Blackwell<br/>+ contraste<br/>Monte Carlo directo"]
 ```
+
+1. Los sondeos se agregan en una estimación nacional por partido, corrigiendo el sesgo de cada encuestadora.
+2. Los resultados de elecciones anteriores reparten esa estimación entre provincias y fijan cuánto puede
+   desviarse cada una.
+3. Se simulan 20 000 escenarios posibles del 29-N con votos enteros por candidatura y circunscripción.
+4. En cada escenario se aplica el reparto legal exacto y se mide cuánto falta para cada escaño.
+5. Con todo ello se estima E_p,c para las circunscripciones elegidas.
+
+Los términos del diagrama se explican en [Conceptos clave](#conceptos-clave).
 
 ## Requisitos
 
@@ -75,18 +114,31 @@ circunscripción *c* si recibe **un voto más**, manteniendo todo lo demás igua
 
 $$E_{p,c} = \mathbb{E}\big[A_p(V_p + 1) - A_p(V_p)\big]$$
 
-donde $A_p$ es el número de escaños que el reparto legal da a *p* y la esperanza recorre todos los escenarios
-simulados. Como un voto solo cambia algo cuando la candidatura está justo en el umbral de un escaño, E es en la
-práctica la **probabilidad de que tu voto sea decisivo** para un escaño (del orden de 1 entre 50 000–150 000).
-Cuanto mayor, más «pesa» el voto. Mide eficacia en escaños, **no** utilidad: no incorpora preferencias,
-gobernabilidad, pactos ni financiación electoral. No es una recomendación de voto.
+donde $V_p$ son los votos de *p* en *c*, $A_p(V_p)$ es el número de escaños que el reparto legal le daría con
+esos votos (con los votos de las demás candidaturas fijos) y la esperanza $\mathbb{E}$ promedia sobre todos
+los escenarios simulados. Un voto solo cambia algo cuando la candidatura está justo en el umbral de un escaño,
+así que E es en la práctica la **probabilidad de que tu voto sea decisivo** para un escaño. Siempre es un
+número muy pequeño: del orden de 1 entre decenas o cientos de miles para candidaturas que compiten por un
+escaño, y mucho menor para las que están lejos de ganarlo o de perderlo. Cuanto mayor, más «pesa» el voto.
+Mide eficacia en escaños, **no** utilidad: no incorpora preferencias, gobernabilidad, pactos ni financiación
+electoral. No es una recomendación de voto.
+
+**E_p,c no es lo mismo que «votos por escaño».** Dividir los votos de un partido entre sus escaños es una media
+*a posteriori*: describe lo que ya pasó. E_p,c es un efecto *marginal* y *a priori*: qué cambiaría un voto más,
+teniendo en cuenta que antes de las elecciones no sabemos el resultado. Un partido puede necesitar muchos votos
+por escaño y, aun así, tener un E alto en una provincia donde está a punto de ganar el último.
+
+**Voto válido.** Votos a candidaturas más votos en blanco; los nulos no cuentan. Es la base sobre la que se
+calcula el umbral del 3 % y las cuotas de voto de este README.
 
 **Circunscripción.** La provincia (más Ceuta y Melilla). Cada una reparte sus propios escaños; un voto solo
 influye en los escaños de su provincia. Si escribes un municipio (Bilbao) se resuelve a su provincia (Bizkaia).
 
 **Reparto legal (LOREG art. 163).** En cada circunscripción: (1) se descartan las candidaturas con menos del
 3 % de los votos válidos (candidaturas + blanco); (2) se dividen los votos de las restantes entre 1, 2, 3…;
-(3) los escaños van a los cocientes mayores (método D'Hondt). Empates de cociente: gana quien tiene más votos;
+(3) los escaños van a los cocientes mayores (método D'Hondt). Un *cociente* es el resultado de dividir los
+votos de una candidatura entre 1, 2, 3…; el *último cociente* es el más bajo que todavía obtiene escaño, y es
+el que se disputa en el margen. Empates de cociente: gana quien tiene más votos;
 si persiste, sorteo. Ceuta y Melilla eligen un diputado por mayoría simple (art. 170).
 
 **Por qué E cambia entre partidos.** Un voto vale más cuando la candidatura está cerca de ganar (o de perder)
@@ -95,15 +147,33 @@ esté el último cociente y de la incertidumbre. Un partido sin opciones de esca
 seguro, tiene E bajo. El voto que no hace ganar escaño a tu partido puede, aun así, quitárselo a otro: E cuenta
 el escaño que gana *p* (que siempre sale de otra candidatura, indicada en «desplaza a»).
 
+**Escalera A_p(n).** Si se fijan los votos de las demás candidaturas y se van sumando votos a *p*, sus escaños
+suben a saltos, como una escalera: no cambian durante miles de votos y, de repente, un voto más le da un escaño.
+Cada peldaño es un *umbral*; E_p,c es la probabilidad de que el resultado real caiga justo antes de uno.
+
 **Escenario / simulación.** Un «mundo posible» del 29-N: una cuota nacional por partido (con error de
 sondeos), una participación y un voto provincial con ruido calibrado. Se simulan 20 000 y en cada uno se
 aplica el reparto legal exacto. Las probabilidades del informe son frecuencias sobre esos mundos.
+
+**Agregado de sondeos (filtro de Kalman).** La intención de voto de cada grupo se modela como una tendencia
+que cambia poco a poco día a día (*paseo aleatorio*). El filtro de Kalman combina esa tendencia con cada
+sondeo nuevo, dando más peso a los más grandes y recientes, y produce una estimación diaria con su incertidumbre.
+
+**Logit.** Transformación $\log\big(p/(1-p)\big)$ de una cuota de voto $p$. Se usa para modelar errores en una
+escala que respeta los límites 0–100 %: el mismo error en logit mueve más puntos a un partido del 30 % que a uno
+del 3 %. Como referencia, 0,1 en logit ≈ 2 puntos para un partido del 30 %.
 
 **Efecto casa.** Sesgo sistemático de cada encuestadora hacia un partido (p. ej. una empresa que da siempre
 1 punto más al PP). Se estima y se descuenta; se supone que el sesgo medio del conjunto de empresas es cero.
 
 **Error del día de la elección.** Error común a todas las encuestas (todas fallan a la vez en la misma
-dirección). Se añade aparte, con una componente compartida por bloque izquierda/derecha.
+dirección). Se añade aparte, con una componente compartida por bloque izquierda/derecha: si las encuestas
+infravaloran a un partido de un bloque, tienden a infravalorar también a sus socios.
+
+**Error provincial (σ territorial).** Cuánto puede desviarse el voto de una candidatura en una provincia
+respecto a lo que predice la tendencia nacional. Se calibra con cómo cambió el voto de cada provincia entre
+2019N y 2023, y es mayor en proporción para los partidos pequeños. Parte del error es común a todas las
+provincias de una misma comunidad autónoma.
 
 **Intervalo 90 % (p05–p95).** El 90 % de los escenarios cae dentro del intervalo: el 5 % por debajo de p05 y
 el 5 % por encima de p95.
@@ -111,7 +181,15 @@ el 5 % por encima de p95.
 **Estimador condicional (Rao-Blackwell) vs. Monte Carlo directo.** Sumar un voto y volver a repartir casi
 nunca cambia nada en 20 000 simulaciones, así que el conteo directo es muy ruidoso. El estimador condicional
 calcula analíticamente, en cada escenario, la probabilidad de caer justo en el umbral de un escaño; da el
-mismo valor esperado con mucha menos varianza. El contraste directo se hace con +1000 votos (`M1000`).
+mismo valor esperado con mucha menos varianza (el nombre viene del teorema de Rao-Blackwell, que garantiza
+esa mejora al promediar una probabilidad calculada en lugar de un conteo de 0 y 1). El contraste directo se
+hace con +1000 votos (`M1000`).
+
+**M_k.** Escaños esperados que añadirían *k* votos más (k = 10, 100, 1000). Si la probabilidad de estar cerca de
+un umbral es parecida a esa escala, M_k ≈ k × E.
+
+**Desplaza a.** Todo escaño que gana una candidatura lo pierde otra en la misma circunscripción. «Desplaza a»
+indica a quién se lo quitaría tu voto con más frecuencia cuando resulta decisivo.
 
 ## Siglas de partidos
 
@@ -140,7 +218,7 @@ mismo valor esperado con mucha menos varianza. El contraste directo se hace con 
 | `escaños` | escaños medios de la candidatura en esa provincia |
 | `E (por 100k votos)` | E_p,c × 100 000: escaños esperados que añadirían 100 000 votos «sueltos», o equivalentemente probabilidad de ser decisivo × 100 000. Comparable entre partidos y provincias |
 | `1 entre…` | 1 / E: tu voto es decisivo en uno de cada N casos (— si es prácticamente nulo) |
-| `M(1000)` | escaños esperados que añaden 1000 votos adicionales (≈ 1000 × E si la escalera es lineal a esa escala) |
+| `M(1000)` | escaños esperados que añaden 1000 votos adicionales (≈ 1000 × E si la probabilidad de estar cerca de un umbral es parecida a esa escala) |
 | `directo` | lo mismo medido por Monte Carlo directo (contraste del estimador) |
 | `desplaza a` | candidatura que con más frecuencia pierde el escaño cuando tu voto es decisivo |
 
@@ -159,7 +237,7 @@ mismo valor esperado con mucha menos varianza. El contraste directo se hace con 
 | `E_per_100k` | E × 100 000 |
 | `M10`, `M100`, `M1000` | escaños esperados por +10, +100, +1000 votos (estimador condicional) |
 | `direct_M1000`, `direct_M1000_se` | M1000 por Monte Carlo directo y su error estándar |
-| `ess` | tamaño muestral efectivo del estimador (cuántos escenarios aportan información) |
+| `ess` | tamaño muestral efectivo (*effective sample size*): cuántos escenarios aportan información real al estimador; si es bajo, `E` es menos fiable |
 | `n_sims` | escenarios usados en el estimador condicional |
 | `median_votes_to_next` | mediana de los votos que le faltan para el siguiente escaño |
 | `top_displaced` | partido al que con más frecuencia quitaría el escaño |
