@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+from electoral_lab.geography.catalog import norm, provinces
 from electoral_lab.storage import paths
 
 st.set_page_config(page_title="Electoral Lab · 29-N", layout="wide")
@@ -55,26 +56,45 @@ st.sidebar.caption("Generales 29-N-2026 · eficacia marginal del voto")
 runs = list_runs()
 
 with st.sidebar.expander("Nueva ejecución", expanded=not runs):
-    provs = st.text_input("Circunscripciones para E_p,c", "Málaga Madrid Bilbao")
+    catalog = provinces()
+    all_provs = st.checkbox("Todas las circunscripciones", value=False)
+    provs = st.multiselect(
+        "Circunscripciones para E_p,c",
+        sorted(catalog, key=lambda c: norm(catalog[c].name)),
+        format_func=lambda c: catalog[c].name,
+        default=[],
+        disabled=all_provs,
+        placeholder="Selecciona una o varias circunscripciones",
+        key="run_provinces",
+    )
+    if all_provs:
+        st.caption(f"Se calculará E_p,c en las {len(catalog)} circunscripciones. Puede tardar más.")
+    elif not provs:
+        st.caption("Selecciona al menos una circunscripción o marca todas.")
     nsims = st.number_input("Simulaciones", 2000, 100000, 20000, step=2000)
     sigma = st.slider("Escala σ territorial", 0.4, 1.5, 1.0, 0.1)
     refresh = st.checkbox("Actualizar fuentes antes (requiere red)", value=False)
-    if st.button("Ejecutar pipeline"):
+    if st.button("Ejecutar pipeline", disabled=not (all_provs or provs)):
         base = [sys.executable, "-m", "electoral_lab.cli.main"]
         log = ""
-        with st.spinner("Ejecutando… (≈1 min con 20 000 simulaciones)"):
+        with st.spinner("Ejecutando… El tiempo depende de las simulaciones y circunscripciones seleccionadas."):
             if refresh:
                 r0 = subprocess.run([*base, "sources", "refresh"], capture_output=True, text=True, cwd=paths.ROOT)
                 log += r0.stdout + r0.stderr
-            cmd = [*base, "run", *provs.split(), "--sims", str(int(nsims)), "--set", f"territorial.sigma_scale={sigma}"]
+            selection = ["--all"] if all_provs else provs
+            cmd = [*base, "run", *selection, "--sims", str(int(nsims)),
+                   "--set", f"territorial.sigma_scale={sigma}"]
             res = subprocess.run(cmd, capture_output=True, text=True, cwd=paths.ROOT)
             log += res.stdout + res.stderr
         st.code(log[-4000:])
+        if res.returncode:
+            st.error("La ejecución ha fallado. Revisa el registro anterior.")
         st.cache_data.clear()
         runs = list_runs()
 
 if not runs:
-    st.info("No hay ejecuciones todavía. Lanza `uv run electoral run Málaga Madrid Bilbao` o usa el panel lateral.")
+    st.info('No hay ejecuciones todavía. Lanza `uv run electoral run "A Coruña" Madrid`, '
+            "`uv run electoral run --all` o usa el panel lateral.")
     st.stop()
 
 run_dir = st.sidebar.selectbox("Ejecución", runs, format_func=lambda p: p.name)
@@ -102,8 +122,8 @@ with tab_e:
         st.warning("Esta ejecución no calculó E_p,c.")
     else:
         names = piv.drop_duplicates("province")[["province", "province_name"]].values.tolist()
-        code = st.radio("Circunscripción", [c for c, _ in names],
-                        format_func=lambda c: dict(names)[c], horizontal=True)
+        code = st.selectbox("Circunscripción", [c for c, _ in names],
+                            format_func=lambda c: dict(names)[c], key="pivotal_province")
         sub = piv[piv.province == code].sort_values("E", ascending=False)
         show = sub[["party", "seats_mean", "E_per_100k", "one_in", "M1000", "direct_M1000",
                     "median_votes_to_next", "top_displaced"]].rename(columns={
@@ -188,8 +208,7 @@ with tab_c:
     sp, vp = R["seats_province"], R["votes_province"]
     if not sp.empty:
         names = sp.drop_duplicates("province").set_index("province")["province_name"].to_dict()
-        code = st.selectbox("Provincia", list(names), format_func=lambda c: f"{names[c]} ({c})",
-                            index=list(names).index("29") if "29" in names else 0)
+        code = st.selectbox("Provincia", list(names), format_func=lambda c: f"{names[c]} ({c})")
         s = sp[sp.province == code].merge(vp[vp.province == code], on=["province", "party"], how="left")
         s = s[(s["mean"] > 0.01) | (s.share_mean > 0.01)].sort_values("mean", ascending=False)
         st.caption(f"{int(s.seats_total.iloc[0])} escaños en juego")

@@ -69,16 +69,30 @@ def data_seed():
 
 @app.command("run")
 def run_cmd(
-    where: list[str] = typer.Argument(None, help="Circunscripciones o municipios (p. ej. Málaga Madrid Bilbao)"),
+    where: list[str] = typer.Argument(
+        None, help='Circunscripciones o municipios; entre comillas si hay espacios (p. ej. "A Coruña" Madrid)'
+    ),
+    all_: bool = typer.Option(False, "--all", help="Calcular E_p,c en las 52 circunscripciones"),
     sims: int = typer.Option(None, help="Número de simulaciones (por defecto, config)"),
     pivotal_sims: int = typer.Option(4000, help="Simulaciones usadas por el estimador condicional"),
     seed: int = typer.Option(None),
     config: Path = typer.Option(None, help="YAML de configuración alternativo"),
     set_: list[str] = typer.Option(None, "--set", help="Sobrescribe claves: territorial.sigma_scale=0.7"),
 ):
-    """Ejecución completa: ajuste nacional, simulación, reparto y E_{p,c}."""
-    from electoral_lab.geography.catalog import resolve
+    """Ejecución completa para los lugares indicados o para todas las circunscripciones con --all."""
+    from electoral_lab.geography.catalog import provinces, resolve
     from electoral_lab.pipeline import load_config, run
+
+    if all_ and where:
+        raise typer.BadParameter("Usa una lista de circunscripciones o --all, no ambos.")
+    if not all_ and not where:
+        raise typer.BadParameter(
+            'Indica al menos una circunscripción (p. ej. "A Coruña" Madrid) o usa --all.'
+        )
+    try:
+        codes = list(provinces()) if all_ else list(dict.fromkeys(resolve(w) for w in where))
+    except KeyError as exc:
+        raise typer.BadParameter(exc.args[0], param_hint="WHERE") from exc
 
     overrides = {}
     for kv in set_ or []:
@@ -89,7 +103,6 @@ def run_cmd(
             pass
         overrides[k] = v
     cfg = load_config(config, overrides)
-    codes = [resolve(w) for w in (where or ["Málaga", "Madrid", "Bilbao"])]
     out = run(codes, cfg, n_sims=sims, pivotal_sims=pivotal_sims, seed=seed, log=typer.echo)
     typer.echo("")
     _print_report(out)
@@ -129,7 +142,7 @@ def report_cmd(run_dir: Path = typer.Argument(None)):
 
     out = run_dir or latest_run()
     if out is None:
-        typer.echo("No hay ejecuciones. Usa: electoral run")
+        typer.echo("No hay ejecuciones. Usa: electoral run <circunscripciones> o electoral run --all")
         raise typer.Exit(1)
     _print_report(out)
 

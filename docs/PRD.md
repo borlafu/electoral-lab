@@ -18,7 +18,11 @@ de escaños según la candidatura elegida (E_p,c), con datos actualizados y la i
 
 ## Usuarios y flujos
 - `electoral run <lugares>`: informe de E_p,c para provincias o municipios (Bilbao → Bizkaia).
+- `electoral run --all`: E_p,c en las 52 circunscripciones. No hay selección por defecto;
+  ambos modos son excluyentes y los nombres compuestos se pasan entre comillas.
 - `electoral ui`: explorar escenarios, sensibilidad y auditoría.
+  La nueva ejecución exige seleccionar circunscripciones en un multiselector o marcar todas;
+  los resultados de E_p,c se exploran en un desplegable.
 - `electoral sources refresh`: actualizar datos hasta el día de la elección.
 
 ## Criterios de aceptación
