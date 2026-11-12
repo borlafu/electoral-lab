@@ -36,7 +36,8 @@ puede ejecutarse sin red.
 
 ```bash
 uv run electoral data validate                 # comprueba datos y reproduce el reparto oficial 2019N y 2023
-uv run electoral run Málaga Madrid Bilbao      # ejecución completa (~45 s); acepta provincias o municipios
+uv run electoral run "A Coruña" Madrid Bilbao  # lista explícita; acepta provincias o municipios
+uv run electoral run --all                     # E_p,c para las 52 circunscripciones (tarda más)
 uv run electoral report                        # vuelve a imprimir el informe de la última ejecución
 uv run electoral ui                            # interfaz web local en http://localhost:8501
 
@@ -55,6 +56,17 @@ uv run electoral sources import-interior 02_202307_1.zip --election congreso_202
 
 Cada ejecución crea `data/runs/<fecha>_<hash>_<elección>/` con `manifest.json` (semilla, hashes de datos
 y configuración, commit), CSV de resultados y `pivotal.csv` con E_p,c.
+
+`electoral run` requiere una lista de lugares o `--all`: no tiene circunscripciones por defecto,
+y no permite combinar ambos modos. Los nombres compuestos deben ir entre comillas en la consola
+(`"A Coruña"`, `"Ciudad Real"`, `"Santa Cruz de Tenerife"`). Los alias que resuelven a la misma
+circunscripción se calculan una sola vez (por ejemplo, Bilbao y Bizkaia).
+La simulación nacional mantiene su cobertura completa; la selección delimita dónde se estima E_p,c
+y se guardan las simulaciones detalladas.
+
+En la interfaz, selecciona una o varias circunscripciones en el multiselector, o marca
+«Todas las circunscripciones». No hay ninguna preseleccionada. Los nombres compuestos se conservan
+sin dividirse por espacios, y los resultados de E_p,c se exploran mediante un desplegable.
 
 ## Conceptos clave
 
