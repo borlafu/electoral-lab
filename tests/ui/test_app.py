@@ -16,6 +16,9 @@ APP = Path(__file__).resolve().parents[2] / "src/electoral_lab/ui/app.py"
 def ui(monkeypatch, tmp_path):
     monkeypatch.setattr(paths, "RUNS", tmp_path / "runs")
     monkeypatch.setattr(paths, "ROOT", tmp_path)
+    monkeypatch.setattr(paths, "PUBLISHED", tmp_path / "published" / "latest")
+    for var in ("ELECTORAL_LAB_READONLY", "ELECTORAL_LAB_BLACKOUT", "ELECTORAL_LAB_TODAY"):
+        monkeypatch.delenv(var, raising=False)
     return AppTest.from_file(str(APP), default_timeout=15)
 
 
@@ -101,3 +104,62 @@ def test_results_use_dropdown_and_keep_compound_names(ui):
         assert dropdown.value == code
     province = next(s for s in ui.selectbox if s.label == "Provincia")
     assert province.value == "15"  # sin valor predeterminado fijo para Málaga
+
+
+def _publish_fixture(tmp_path, make_run):
+    from electoral_lab.publish import publish
+
+    run = make_run(tmp_path, ["29"])
+    publish(run, require_all=False)
+    return run
+
+
+def test_readonly_shows_only_published_snapshot(ui, monkeypatch, tmp_path, make_run):
+    run = _publish_fixture(tmp_path, make_run)
+    monkeypatch.setenv("ELECTORAL_LAB_READONLY", "1")
+    ui.run()
+    assert not ui.exception
+    assert not ui.button  # sin panel de ejecución
+    assert not ui.multiselect
+    assert all(s.label != "Ejecución" for s in ui.selectbox)
+    assert any(f"Publicada · {run.name}" in m.value for m in ui.sidebar.markdown)
+
+
+def test_readonly_without_snapshot_warns(ui, monkeypatch):
+    monkeypatch.setenv("ELECTORAL_LAB_READONLY", "true")
+    ui.run()
+    assert not ui.exception
+    assert "no hay un análisis publicado" in ui.warning[0].value
+
+
+def test_local_mode_lists_local_runs_and_published(ui, tmp_path, make_run):
+    _publish_fixture(tmp_path, make_run)
+    ui.run()
+    assert not ui.exception
+    assert ui.button  # panel de ejecución visible
+    runs = next(s for s in ui.selectbox if s.label == "Ejecución")
+    assert len(runs.options) == 2
+    assert runs.options[-1].startswith("Publicada")
+
+
+@pytest.mark.parametrize(("today", "blocked"), [("2026-11-23", False), ("2026-11-24", True),
+                                                 ("2026-11-29", True), ("2026-11-30", False)])
+def test_readonly_blackout_window(ui, monkeypatch, tmp_path, make_run, today, blocked):
+    _publish_fixture(tmp_path, make_run)
+    monkeypatch.setenv("ELECTORAL_LAB_READONLY", "1")
+    monkeypatch.setenv("ELECTORAL_LAB_TODAY", today)
+    ui.run()
+    assert not ui.exception
+    assert bool(ui.warning and "69.7" in ui.warning[0].value) is blocked
+    assert bool(ui.tabs) is not blocked
+
+
+def test_blackout_can_be_disabled_and_ignored_locally(ui, monkeypatch, tmp_path, make_run):
+    _publish_fixture(tmp_path, make_run)
+    monkeypatch.setenv("ELECTORAL_LAB_TODAY", "2026-11-25")
+    ui.run()  # en local (sin solo lectura) no se aplica
+    assert not ui.exception and ui.tabs
+    monkeypatch.setenv("ELECTORAL_LAB_READONLY", "1")
+    monkeypatch.setenv("ELECTORAL_LAB_BLACKOUT", "off")
+    ui.run()
+    assert not ui.exception and ui.tabs

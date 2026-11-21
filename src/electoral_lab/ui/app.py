@@ -1,14 +1,24 @@
-"""Interfaz local (Streamlit) para explorar la última ejecución.
+"""Interfaz Streamlit para explorar ejecuciones.
 
 Lanzar con:  uv run electoral ui
+
+Modo solo lectura (app publicada): ELECTORAL_LAB_READONLY=1 como variable de entorno o como secreto de
+Streamlit. En ese modo solo se muestra la instantánea de data/published/latest (generada con
+`electoral publish`) y se oculta el panel de ejecución.
+
+Veda de sondeos (art. 69.7 LOREG): en modo solo lectura la app no muestra resultados entre las fechas de
+ELECTORAL_LAB_BLACKOUT (por defecto 2026-11-24/2026-11-29, hora de Madrid). Usa "off" para desactivarla.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
+from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import altair as alt
 import numpy as np
@@ -22,10 +32,62 @@ st.set_page_config(page_title="Electoral Lab · 29-N", layout="wide")
 
 
 # ---------------------------------------------------------------- carga
-def list_runs() -> list[Path]:
-    if not paths.RUNS.exists():
-        return []
-    return sorted((p for p in paths.RUNS.iterdir() if (p / "manifest.json").exists()), reverse=True)
+_TRUE = {"1", "true", "yes", "si", "sí", "on"}
+
+
+DEFAULT_BLACKOUT = "2026-11-24/2026-11-29"
+
+
+def setting(name: str) -> str | None:
+    """Variable de entorno o, si no existe, secreto de Streamlit."""
+    val = os.environ.get(name)
+    if val is None:
+        try:
+            val = st.secrets.get(name)
+        except Exception:  # sin secrets.toml: Streamlit lanza una excepción propia
+            val = None
+    return None if val is None else str(val).strip()
+
+
+def is_readonly() -> bool:
+    val = setting("ELECTORAL_LAB_READONLY")
+    return val is not None and val.lower() in _TRUE
+
+
+def blackout_window() -> tuple[date, date] | None:
+    raw = setting("ELECTORAL_LAB_BLACKOUT") or DEFAULT_BLACKOUT
+    if raw.lower() in {"off", "0", "false", "no", ""}:
+        return None
+    start, _, end = raw.partition("/")
+    return date.fromisoformat(start), date.fromisoformat(end or start)
+
+
+def today_madrid() -> date:
+    fixed = setting("ELECTORAL_LAB_TODAY")  # solo para pruebas
+    return date.fromisoformat(fixed) if fixed else datetime.now(ZoneInfo("Europe/Madrid")).date()
+
+
+def published_run() -> Path | None:
+    p = paths.PUBLISHED
+    return p if (p / "manifest.json").exists() else None
+
+
+def list_runs(readonly: bool = False) -> list[Path]:
+    pub = published_run()
+    if readonly:
+        return [pub] if pub else []
+    local = []
+    if paths.RUNS.exists():
+        local = sorted((p for p in paths.RUNS.iterdir() if (p / "manifest.json").exists()), reverse=True)
+    return local + ([pub] if pub else [])
+
+
+def run_label(p: Path) -> str:
+    if p == paths.PUBLISHED:
+        meta = p / "PUBLISHED.json"
+        run_id = json.loads(meta.read_text()).get("run_id", p.name) if meta.exists() else p.name
+        return f"Publicada · {run_id}"
+    return p.name
 
 
 @st.cache_data(show_spinner=False)
@@ -38,24 +100,57 @@ def load_run(run_dir: str) -> dict:
         out[name] = pd.read_csv(f, dtype={"province": str}) if f.exists() else pd.DataFrame()
     f = d / "pivotal_detail.json"
     out["pivotal_detail"] = json.loads(f.read_text()) if f.exists() else {}
+    f = d / "PUBLISHED.json"
+    out["published"] = json.loads(f.read_text()) if f.exists() else None
     f = d / "sims.npz"
     if f.exists():
-        z = np.load(f, allow_pickle=True)  # fichero local generado por el propio pipeline
+        z = np.load(f, allow_pickle=True)  # fichero generado por el propio pipeline
         out["sims"] = {k: z[k] for k in z.files}
     return out
 
 
+@st.cache_data(show_spinner=False)
+def _packed_dist(run_dir: str) -> dict[str, np.ndarray]:
+    f = Path(run_dir) / "dist_next.npz"
+    if not f.exists():
+        return {}
+    with np.load(f) as z:
+        return {k: z[k] for k in z.files}
+
+
 def load_dist(run_dir: str, code: str, party: str) -> np.ndarray | None:
     f = Path(run_dir) / f"dist_next_{code}_{party}.npy"
-    return np.load(f) if f.exists() else None
+    if f.exists():
+        return np.load(f)
+    return _packed_dist(run_dir).get(f"{code}_{party}")
 
 
 # ---------------------------------------------------------------- barra lateral
 st.sidebar.title("Electoral Lab")
 st.sidebar.caption("Generales 29-N-2026 · eficacia marginal del voto")
-runs = list_runs()
+READONLY = is_readonly()
+runs = list_runs(READONLY)
 
-with st.sidebar.expander("Nueva ejecución", expanded=not runs):
+if READONLY and (win := blackout_window()) and win[0] <= today_madrid() <= win[1]:
+    st.title("Electoral Lab · 29-N")
+    st.warning(
+        f"Del {win[0]:%d/%m} al {win[1]:%d/%m} la app no muestra resultados. El artículo 69.7 de la LOREG prohíbe "
+        "publicar, difundir o reproducir sondeos electorales durante los cinco días anteriores a la votación. "
+        "El análisis volverá a estar disponible después de las elecciones."
+    )
+    st.markdown("El código y la metodología siguen disponibles en "
+                "[github.com/borlafu/electoral-lab](https://github.com/borlafu/electoral-lab).")
+    st.stop()
+
+if READONLY:
+    st.sidebar.info(
+        "Análisis precalculado para las 52 circunscripciones. Para otros escenarios, ejecuta la app en local: "
+        "[github.com/borlafu/electoral-lab](https://github.com/borlafu/electoral-lab)."
+    )
+
+
+def run_panel() -> None:
+    """Panel para lanzar el pipeline desde la interfaz (solo en local)."""
     catalog = provinces()
     all_provs = st.checkbox("Todas las circunscripciones", value=False)
     provs = st.multiselect(
@@ -90,16 +185,31 @@ with st.sidebar.expander("Nueva ejecución", expanded=not runs):
         if res.returncode:
             st.error("La ejecución ha fallado. Revisa el registro anterior.")
         st.cache_data.clear()
-        runs = list_runs()
+
+
+if not READONLY:
+    with st.sidebar.expander("Nueva ejecución", expanded=not runs):
+        run_panel()
+    runs = list_runs(READONLY)
 
 if not runs:
-    st.info('No hay ejecuciones todavía. Lanza `uv run electoral run "A Coruña" Madrid`, '
-            "`uv run electoral run --all` o usa el panel lateral.")
+    if READONLY:
+        st.warning("Todavía no hay un análisis publicado. Genera uno con `electoral run --all` y "
+                   "`electoral publish`.")
+    else:
+        st.info('No hay ejecuciones todavía. Lanza `uv run electoral run "A Coruña" Madrid`, '
+                "`uv run electoral run --all` o usa el panel lateral.")
     st.stop()
 
-run_dir = st.sidebar.selectbox("Ejecución", runs, format_func=lambda p: p.name)
+if len(runs) > 1:
+    run_dir = st.sidebar.selectbox("Ejecución", runs, format_func=run_label)
+else:
+    run_dir = runs[0]
+    st.sidebar.markdown(f"**Ejecución:** {run_label(run_dir)}")
 R = load_run(str(run_dir))
 M = R["manifest"]
+if R.get("published"):
+    st.sidebar.markdown(f"**Publicado:** {R['published'].get('published_at', '')[:16].replace('T', ' ')} UTC")
 st.sidebar.markdown(
     f"**Último sondeo:** {M.get('last_poll')}  \n**Sondeos usados:** {M.get('n_polls')}  \n"
     f"**Simulaciones:** {M.get('n_sims'):,}  \n**Semilla:** {M.get('seed')}  \n"
@@ -241,4 +351,7 @@ with tab_a:
     st.markdown(f"**Modelo σ territorial:** {M.get('sigma_model', {}).get('notes', '')}")
     st.markdown(f"**Error de calibración nacional:** {M.get('calib_error', float('nan')):.4f}")
     st.json(M, expanded=False)
-    st.code(f"uv run electoral report {run_dir.relative_to(paths.ROOT)}")
+    try:
+        st.code(f"uv run electoral report {run_dir.relative_to(paths.ROOT)}")
+    except ValueError:
+        st.code(f"uv run electoral report {run_dir}")

@@ -19,13 +19,18 @@ app.add_typer(data, name="data")
 def sources_refresh(
     only: list[str] | None = typer.Option(None, help="seats, censo, candidacies, polls, results, ep2024"),
     refetch_results: bool = typer.Option(False, help="Volver a descargar las 52 páginas de resultados históricos"),
+    strict: bool = typer.Option(False, "--strict", help="Termina con error si falla alguna fuente (útil en CI)"),
 ):
     """Descarga las fuentes, archiva los originales y regenera data/normalized."""
     from electoral_lab.ingestion.refresh import refresh
 
+    failed = False
     for s in refresh(only=only, offline_results=not refetch_results):
         mark = "OK " if s.ok else "ERR"
+        failed |= not s.ok
         typer.echo(f"[{mark}] {s.name:<16} {s.rows:>6} filas  {s.message}")
+    if strict and failed:
+        raise typer.Exit(1)
 
 
 @sources.command("list")
@@ -145,6 +150,29 @@ def report_cmd(run_dir: Path = typer.Argument(None)):
         typer.echo("No hay ejecuciones. Usa: electoral run <circunscripciones> o electoral run --all")
         raise typer.Exit(1)
     _print_report(out)
+
+
+@app.command("publish")
+def publish_cmd(
+    run_dir: Path = typer.Argument(None, help="Ejecución a publicar (por defecto, la última)"),
+    dest: Path = typer.Option(None, help="Carpeta de destino (por defecto data/published/latest)"),
+    partial: bool = typer.Option(False, "--partial", help="Permite publicar ejecuciones sin las 52 circunscripciones"),
+):
+    """Exporta una ejecución a data/published/latest en formato ligero para la app publicada."""
+    from electoral_lab.pipeline import latest_run
+    from electoral_lab.publish import publish
+
+    src = run_dir or latest_run()
+    if src is None:
+        typer.echo("No hay ejecuciones. Usa primero: electoral run --all")
+        raise typer.Exit(1)
+    try:
+        res = publish(src, dest, require_all=not partial)
+    except (FileNotFoundError, ValueError) as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(1) from exc
+    typer.echo(f"Publicada {res.run_id} en {res.dest} ({res.provinces} circunscripciones, "
+               f"{res.size_bytes / 1e6:.1f} MB)")
 
 
 @app.command("ui")

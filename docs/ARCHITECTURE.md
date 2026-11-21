@@ -14,6 +14,7 @@ src/electoral_lab/
   pivotal/        breakpoints.py (umbrales exactos de la escalera A_p(n)), estimator.py (Rao-Blackwell)
   validation/     comprobaciones de datos y reproducción de repartos oficiales
   pipeline.py     ejecución completa y artefactos en data/runs/
+  publish.py      instantánea ligera de una ejecución en data/published/latest (app publicada)
   cli/main.py     Typer: sources, data, run, report, ui
   ui/app.py       Streamlit
 ```
@@ -23,6 +24,8 @@ src/electoral_lab/
 2. `data/normalized/*.csv`: tablas limpias (si no existen se usan las de `data/seed/`).
 3. `data/runs/<run_id>/`: `manifest.json`, `national_*.csv`, `seats_*.csv`, `votes_province.csv`,
    `pivotal.csv`, `pivotal_detail.json`, `dist_next_<prov>_<partido>.npy`, `sims.npz`.
+4. `data/published/latest/`: copia ligera de una ejecución `--all` (`electoral publish`), versionada en git.
+   La regenera a diario `.github/workflows/publish.yml`; la app en modo solo lectura solo lee esta carpeta.
 
 ## Decisiones
 - El motor legal no conoce los modelos; recibe votos enteros. Así se testea aislado.

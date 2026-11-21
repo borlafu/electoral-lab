@@ -79,6 +79,7 @@ uv run electoral run "A Coruña" Madrid Bilbao  # lista explícita; acepta provi
 uv run electoral run --all                     # E_p,c para las 52 circunscripciones (tarda más)
 uv run electoral report                        # vuelve a imprimir el informe de la última ejecución
 uv run electoral ui                            # interfaz web local en http://localhost:8501
+uv run electoral publish                       # exporta la última ejecución --all a data/published/latest
 
 uv run electoral sources refresh               # vuelve a descargar BOE, INE, sondeos y resultados
 uv run electoral sources refresh --only polls  # solo sondeos
@@ -106,6 +107,46 @@ y se guardan las simulaciones detalladas.
 En la interfaz, selecciona una o varias circunscripciones en el multiselector, o marca
 «Todas las circunscripciones». No hay ninguna preseleccionada. Los nombres compuestos se conservan
 sin dividirse por espacios, y los resultados de E_p,c se exploran mediante un desplegable.
+
+## Publicación (app en Streamlit Cloud)
+
+La app publicada no calcula nada: carga un análisis completo precalculado de las 52 circunscripciones
+desde `data/published/latest/`. Esa instantánea se versiona en git y ocupa unos 4 MB, frente a los ~35 MB
+de la ejecución original, porque omite las simulaciones provinciales detalladas que la interfaz no usa.
+
+```bash
+uv run electoral sources refresh --only polls
+uv run electoral run --all                     # ~6 min con 2 CPU
+uv run electoral publish                       # exige las 52 circunscripciones (o --partial)
+uv run electoral data seed                     # actualiza también los datos semilla
+git add data/published data/seed && git commit -m "Análisis publicado" && git push
+```
+
+El flujo `.github/workflows/publish.yml` hace exactamente eso cada día a las 06:30 (hora de Madrid) y
+también puede lanzarse a mano desde la pestaña Actions de GitHub (con `force` para recalcular sin sondeos
+nuevos, p. ej. tras cambiar el modelo). Solo hace commit si hay sondeos nuevos. Streamlit Cloud
+redespliega la app al recibir el commit en `main`.
+
+**Modo solo lectura.** En la configuración de la app en Streamlit Cloud (Settings → Secrets):
+
+```toml
+ELECTORAL_LAB_READONLY = "1"
+```
+
+Con ese secreto (o la variable de entorno del mismo nombre) la app muestra solo la instantánea publicada,
+oculta el panel «Nueva ejecución» y enlaza al repositorio para ejecutar otros escenarios en local. Sin él,
+en local, la app lista tus ejecuciones de `data/runs/` y, al final, la publicada.
+
+**Veda de sondeos (art. 69.7 LOREG).** Durante los cinco días anteriores a la votación está prohibido
+publicar, difundir o reproducir sondeos electorales por cualquier medio. Por eso:
+
+- el flujo de GitHub Actions no publica nada después de `PUBLISH_UNTIL` (2026-11-23, hora de Madrid),
+  ni siquiera si se lanza a mano;
+- en modo solo lectura la app oculta los resultados del 24 al 29 de noviembre y muestra un aviso. La ventana
+  se cambia con el secreto `ELECTORAL_LAB_BLACKOUT = "AAAA-MM-DD/AAAA-MM-DD"` o se desactiva con `"off"`.
+  En local (sin modo solo lectura) no se aplica.
+
+Esto no es asesoramiento legal.
 
 ## Conceptos clave
 
@@ -223,6 +264,11 @@ indica a quién se lo quitaría tu voto con más frecuencia cuando resulta decis
 | `desplaza a` | candidatura que con más frecuencia pierde el escaño cuando tu voto es decisivo |
 
 ## Ficheros de una ejecución (`data/runs/<run_id>/`)
+
+La instantánea publicada (`data/published/latest/`) contiene los mismos CSV y JSON, más
+`PUBLISHED.json` (ejecución de origen, fecha de publicación, commit, último sondeo y tamaño). Su `sims.npz`
+solo guarda escaños nacionales y cuotas nacionales por escenario, y `dist_next.npz` empaqueta los
+`dist_next_<prov>_<partido>.npy` con claves `<prov>_<partido>`.
 
 **`pivotal.csv`** – eficacia marginal por provincia y partido
 
