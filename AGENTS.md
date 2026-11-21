@@ -7,3 +7,5 @@
   en `data/manual/`, y se documentan en `docs/DATA_SOURCES.md`.
 - Los parámetros del modelo viven en `configs/models/default.yaml`; documenta cambios en `docs/MODEL_CARD.md`.
 - Textos de usuario en español. Usa `ELECTORAL_LAB_CONTACT` para el User-Agent de descargas.
+- `data/published/latest/` se genera con `electoral publish` (o el flujo `publish.yml`); no se edita a mano.
+  El flujo no debe publicar durante la veda de sondeos (art. 69.7 LOREG); respeta `PUBLISH_UNTIL`.

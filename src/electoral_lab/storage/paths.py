@@ -30,6 +30,7 @@ NORMALIZED = DATA / "normalized"
 SEED = DATA / "seed"
 MANUAL = DATA / "manual"
 RUNS = DATA / "runs"
+PUBLISHED = DATA / "published" / "latest"  # instantánea ligera versionada que carga la app publicada
 CATALOG_DB = DATA / "catalog.sqlite"
 
 

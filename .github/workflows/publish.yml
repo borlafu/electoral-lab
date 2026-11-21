@@ -1,0 +1,105 @@
+# Recalcula el análisis completo (52 circunscripciones) y publica la instantánea ligera que carga la app de
+# Streamlit Cloud. Streamlit redespliega la app al detectar el commit en main.
+#
+# Calendario legal: el art. 69.7 LOREG prohíbe publicar, difundir o reproducir sondeos durante los cinco días
+# anteriores a la votación (del 24 al 28 de noviembre para el 29-N). El flujo no publica nada después de
+# PUBLISH_UNTIL (hora de Madrid), ni siquiera si se lanza a mano.
+name: Publicar análisis completo
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # 06:30 en Madrid (UTC+1)
+  workflow_dispatch:
+    inputs:
+      sims:
+        description: Número de simulaciones
+        default: "20000"
+        required: false
+      force:
+        description: Recalcular aunque no haya sondeos nuevos (p. ej. tras cambiar el modelo)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-snapshot
+  cancel-in-progress: false
+
+env:
+  PUBLISH_UNTIL: "2026-11-23"
+  ELECTORAL_LAB_CONTACT: ${{ vars.ELECTORAL_LAB_CONTACT || 'github-actions@users.noreply.github.com' }}
+  UV_PYTHON: "3.12"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Comprobar el calendario legal (art. 69.7 LOREG)
+        id: gate
+        run: |
+          today=$(TZ=Europe/Madrid date +%F)
+          if [[ "$today" > "$PUBLISH_UNTIL" ]]; then
+            echo "::notice::Hoy es $today, posterior a PUBLISH_UNTIL=$PUBLISH_UNTIL: no se publica (art. 69.7 LOREG)."
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.publish == 'true'
+
+      - uses: astral-sh/setup-uv@v6
+        if: steps.gate.outputs.publish == 'true'
+        with:
+          enable-cache: true
+
+      - name: Instalar dependencias
+        if: steps.gate.outputs.publish == 'true'
+        run: uv sync --frozen
+
+      - name: Actualizar sondeos
+        id: polls
+        if: steps.gate.outputs.publish == 'true'
+        run: |
+          uv run electoral sources refresh --only polls --strict
+          uv run electoral data seed
+          if git diff --quiet -- data/seed && [[ -f data/published/latest/manifest.json ]] \
+             && [[ "${{ inputs.force }}" != "true" ]]; then
+            echo "::notice::No hay sondeos nuevos desde la última publicación."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validar datos
+        if: steps.polls.outputs.changed == 'true'
+        run: uv run electoral data validate
+
+      - name: Análisis completo (52 circunscripciones)
+        if: steps.polls.outputs.changed == 'true'
+        run: uv run electoral run --all --sims "${{ inputs.sims || '20000' }}"
+
+      - name: Exportar instantánea
+        if: steps.polls.outputs.changed == 'true'
+        run: uv run electoral publish
+
+      - name: Commit y push
+        if: steps.polls.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/published data/seed
+          if git diff --cached --quiet; then
+            echo "Sin cambios que publicar."
+            exit 0
+          fi
+          msg=$(jq -r '"Análisis publicado: \(.run_id) (último sondeo \(.last_poll), \(.n_polls) sondeos)"' data/published/latest/PUBLISHED.json)
+          git commit -m "$msg"
+          git push
+          {
+            echo "### Análisis publicado"
+            jq -r '"- Ejecución: `\(.run_id)`\n- Último sondeo: \(.last_poll) (\(.n_polls) sondeos)\n- Simulaciones: \(.n_sims)\n- Tamaño: \(.size_bytes / 1e6 | floor) MB"' data/published/latest/PUBLISHED.json
+          } >> "$GITHUB_STEP_SUMMARY"
