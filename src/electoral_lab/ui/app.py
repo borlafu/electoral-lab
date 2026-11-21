@@ -25,8 +25,19 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from electoral_lab.geography.catalog import norm, provinces
-from electoral_lab.storage import paths
+# Streamlit Cloud ejecuta este fichero desde el repo, pero puede tener instalada en site-packages una copia
+# antigua de electoral_lab (no la reinstala si pyproject.toml y uv.lock no cambian). Priorizamos siempre el
+# código de src/ del mismo checkout para que app.py y el paquete no se desincronicen.
+_SRC = Path(__file__).resolve().parents[2]
+if (_SRC / "electoral_lab").is_dir():
+    sys.path[:] = [_SRC_STR := str(_SRC)] + [x for x in sys.path if x != _SRC_STR]
+    for _name in [m for m in sys.modules if m == "electoral_lab" or m.startswith("electoral_lab.")]:
+        _file = getattr(sys.modules[_name], "__file__", None) or ""
+        if _file and not Path(_file).resolve().is_relative_to(_SRC):
+            del sys.modules[_name]
+
+from electoral_lab.geography.catalog import norm, provinces  # noqa: E402
+from electoral_lab.storage import paths  # noqa: E402
 
 st.set_page_config(page_title="Electoral Lab · 29-N", layout="wide")
 
