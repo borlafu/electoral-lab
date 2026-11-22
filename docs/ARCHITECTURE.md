@@ -25,7 +25,7 @@ src/electoral_lab/
 3. `data/runs/<run_id>/`: `manifest.json`, `national_*.csv`, `seats_*.csv`, `votes_province.csv`,
    `pivotal.csv`, `pivotal_detail.json`, `dist_next_<prov>_<partido>.npy`, `sims.npz`.
 4. `data/published/latest/`: copia ligera de una ejecución `--all` (`electoral publish`), versionada en git.
-   La regenera a diario `.github/workflows/publish.yml` mediante un PR con auto-merge; la app en modo solo lectura solo lee esta carpeta.
+   La regenera a diario `.github/workflows/publish.yml` con un commit firmado por la API de GitHub; la app en modo solo lectura solo lee esta carpeta.
 
 ## Decisiones
 - El motor legal no conoce los modelos; recibe votos enteros. Así se testea aislado.
