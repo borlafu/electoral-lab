@@ -128,8 +128,12 @@ p. ej. tras cambiar el modelo). Si hay sondeos nuevos, crea el commit en `main` 
 (`createCommitOnBranch`) en lugar de `git push`: así GitHub lo firma y sale como Verified, que es lo que
 exige la regla de commits firmados de `main`. Streamlit Cloud redespliega la app al recibir el commit.
 
-Si el ruleset de `main` incluye reglas que un commit directo del bot no puede cumplir (por ejemplo, Code
-Scanning), añade GitHub Actions a la lista de bypass del ruleset (Settings → Rules → Rulesets).
+La regla de Code Scanning del ruleset de `main` espera resultados de CodeQL para un commit que aún no existe,
+así que ningún commit directo puede cumplirla. Además, en un repositorio personal no se puede añadir GitHub
+Actions a la lista de bypass. Por eso el flujo crea el commit con el secreto de Actions `PUBLISH_TOKEN`: un
+token fine-grained del dueño del repositorio (admin, que sí está en el bypass), limitado a este repositorio
+y con permiso Contents en lectura y escritura. El commit sigue saliendo firmado (Verified), con el dueño como
+autor. Sin ese secreto, el flujo usa el `GITHUB_TOKEN` y el ruleset rechaza el commit.
 
 **Modo solo lectura.** En la configuración de la app en Streamlit Cloud (Settings → Secrets):
 
