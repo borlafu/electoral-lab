@@ -1,6 +1,6 @@
 {
- "run_id": "20261121T164735_10c205_20261129",
- "created_at": "2026-11-21T16:53:27+00:00",
+ "run_id": "20261122T144006_780958_20261129",
+ "created_at": "2026-11-22T14:45:03+00:00",
  "seed": 20261129,
  "n_sims": 20000,
  "pivotal_sims": 4000,
@@ -58,9 +58,9 @@
   "51",
   "52"
  ],
- "data_hash": "10c2055cd5888949",
+ "data_hash": "780958ade7eb9e7d",
  "config_hash": "92d14c7836b061aa",
- "git_commit": "3be1b41",
+ "git_commit": "f852a7d",
  "data_files": {
   "constituencies_2026.csv": "data/seed/constituencies_2026.csv",
   "censo_2026.csv": "data/seed/censo_2026.csv",
@@ -71,22 +71,22 @@
   "ep2024_profile.csv": "data/seed/ep2024_profile.csv"
  },
  "sigma_model": {
-  "a": 0.009265683102305782,
-  "b": 0.0016928377151307179,
+  "a": 0.009265683102305777,
+  "b": 0.001692837715130718,
   "floor": 0.06,
   "cap": 0.6,
   "n_points": 220,
   "notes": "ajuste congreso_2019n->congreso_2023: var = 0.0093 + 0.00169/cuota, n=220"
  },
- "calib_error": 0.003687496012588054,
+ "calib_error": 0.0036860006325905026,
  "bloc_summary": {
-  "p_right_majority": 0.9482,
+  "p_right_majority": 0.9394,
   "p_left_majority": 0.0,
-  "right_mean": 193.37637329101562,
-  "left_mean": 128.0269317626953
+  "right_mean": 192.51315307617188,
+  "left_mean": 128.97093200683594
  },
  "last_poll": "2026-11-21",
- "n_polls": 232,
+ "n_polls": 237,
  "config": {
   "election_date": "2026-11-29",
   "seed": 20261129,
