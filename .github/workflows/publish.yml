@@ -2,9 +2,13 @@
 # app de Streamlit Cloud. Streamlit redespliega la app al detectar el commit.
 #
 # El commit no se hace con git push sino con la API GraphQL de GitHub (createCommitOnBranch): así lo firma
-# GitHub y sale como Verified, que es lo que exige la regla de commits firmados de main. Si el ruleset tiene
-# reglas que el bot no puede cumplir en un push directo (p. ej. Code Scanning), GitHub Actions tiene que
-# figurar en la lista de bypass del ruleset.
+# GitHub y sale como Verified, que es lo que exige la regla de commits firmados de main.
+#
+# La regla de Code Scanning del ruleset espera resultados de CodeQL para un commit que aún no existe, así que
+# ningún commit directo puede cumplirla, y en un repositorio personal no se puede añadir GitHub Actions a la
+# lista de bypass. Por eso el commit se crea con el secreto PUBLISH_TOKEN: un token fine-grained del dueño del
+# repo (admin, que sí está en el bypass), limitado a este repositorio y con Contents en lectura y escritura.
+# Sin ese secreto se usa el GITHUB_TOKEN y el ruleset rechazará el commit.
 #
 # Calendario legal: el art. 69.7 LOREG prohíbe publicar, difundir o reproducir sondeos durante los cinco días
 # anteriores a la votación (del 24 al 28 de noviembre para el 29-N). El flujo no publica nada después de
@@ -94,12 +98,16 @@ jobs:
       - name: Commit firmado en main (API de GitHub)
         if: steps.polls.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.PUBLISH_TOKEN || github.token }}
+          HAS_PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN != '' }}
         run: |
           git add -A data/published data/seed
           if git diff --cached --quiet; then
             echo "Sin cambios que publicar."
             exit 0
+          fi
+          if [[ "$HAS_PUBLISH_TOKEN" != "true" ]]; then
+            echo "::warning::Falta el secreto PUBLISH_TOKEN: el ruleset de main probablemente rechazará el commit."
           fi
           msg=$(jq -r '"Análisis publicado: \(.run_id) (último sondeo \(.last_poll), \(.n_polls) sondeos)"' data/published/latest/PUBLISHED.json)
           # Ficheros añadidos/modificados (contenido en base64) y borrados, respecto al commit de partida.
