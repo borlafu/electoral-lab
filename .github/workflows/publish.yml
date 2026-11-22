@@ -1,12 +1,10 @@
-# Recalcula el análisis completo (52 circunscripciones) y propone la instantánea ligera que carga la app de
-# Streamlit Cloud en un PR desde la rama auto/published-snapshot, con auto-merge por squash. Las reglas de main
-# (commits firmados, historial lineal, CodeQL) se cumplen porque el commit de squash lo firma GitHub. Streamlit
-# redespliega la app cuando el PR entra en main.
+# Recalcula el análisis completo (52 circunscripciones) y publica en main la instantánea ligera que carga la
+# app de Streamlit Cloud. Streamlit redespliega la app al detectar el commit.
 #
-# Token: si existe el secreto PUBLISH_TOKEN (PAT fine-grained o token de GitHub App con Contents y Pull requests
-# en escritura), el PR lo abre esa cuenta y CodeQL se lanza solo. Con el GITHUB_TOKEN por defecto, GitHub deja
-# los workflows del PR pendientes de aprobación ("Approve workflows to run") y hay que habilitar "Allow GitHub
-# Actions to create and approve pull requests" en Settings → Actions → General.
+# El commit no se hace con git push sino con la API GraphQL de GitHub (createCommitOnBranch): así lo firma
+# GitHub y sale como Verified, que es lo que exige la regla de commits firmados de main. Si el ruleset tiene
+# reglas que el bot no puede cumplir en un push directo (p. ej. Code Scanning), GitHub Actions tiene que
+# figurar en la lista de bypass del ruleset.
 #
 # Calendario legal: el art. 69.7 LOREG prohíbe publicar, difundir o reproducir sondeos durante los cinco días
 # anteriores a la votación (del 24 al 28 de noviembre para el 29-N). El flujo no publica nada después de
@@ -29,7 +27,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: publish-snapshot
@@ -39,7 +36,6 @@ env:
   PUBLISH_UNTIL: "2026-11-23"
   ELECTORAL_LAB_CONTACT: ${{ vars.ELECTORAL_LAB_CONTACT || 'github-actions@users.noreply.github.com' }}
   UV_PYTHON: "3.12"
-  PUBLISH_BRANCH: auto/published-snapshot
 
 jobs:
   publish:
@@ -59,8 +55,6 @@ jobs:
 
       - uses: actions/checkout@v4
         if: steps.gate.outputs.publish == 'true'
-        with:
-          token: ${{ secrets.PUBLISH_TOKEN || github.token }}
 
       - uses: astral-sh/setup-uv@v6
         if: steps.gate.outputs.publish == 'true'
@@ -97,36 +91,43 @@ jobs:
         if: steps.polls.outputs.changed == 'true'
         run: uv run electoral publish
 
-      - name: Abrir o actualizar el PR con auto-merge
+      - name: Commit firmado en main (API de GitHub)
         if: steps.polls.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.PUBLISH_TOKEN || github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add data/published data/seed
+          git add -A data/published data/seed
           if git diff --cached --quiet; then
             echo "Sin cambios que publicar."
             exit 0
           fi
           msg=$(jq -r '"Análisis publicado: \(.run_id) (último sondeo \(.last_poll), \(.n_polls) sondeos)"' data/published/latest/PUBLISHED.json)
-          summary=$(jq -r '"- Ejecución: `\(.run_id)`\n- Último sondeo: \(.last_poll) (\(.n_polls) sondeos)\n- Simulaciones: \(.n_sims)\n- Tamaño: \(.size_bytes / 1e6 | floor) MB"' data/published/latest/PUBLISHED.json)
-          # Una sola rama y un solo PR abierto: cada ejecución sustituye a la anterior si aún no se ha fusionado.
-          git switch -C "$PUBLISH_BRANCH"
-          git commit -m "$msg"
-          git push --force origin "$PUBLISH_BRANCH"
-          body=$(printf '%s\n\n%s\n' "Instantánea generada por el flujo «Publicar análisis completo» ([ejecución](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}))." "$summary")
-          pr=$(gh pr list --head "$PUBLISH_BRANCH" --base main --state open --json number --jq '.[0].number // empty')
-          if [[ -z "$pr" ]]; then
-            gh pr create --base main --head "$PUBLISH_BRANCH" --title "$msg" --body "$body"
-            pr=$(gh pr list --head "$PUBLISH_BRANCH" --base main --state open --json number --jq '.[0].number')
-          else
-            gh pr edit "$pr" --title "$msg" --body "$body"
-          fi
-          # Squash: GitHub firma el commit resultante (Verified) y el historial de main queda lineal.
-          gh pr merge "$pr" --auto --squash --subject "$msg (#$pr)" --body "" \
-            || echo "::warning::No se pudo activar el auto-merge en el PR #$pr (¿está habilitado en Settings → General?)."
+          # Ficheros añadidos/modificados (contenido en base64) y borrados, respecto al commit de partida.
+          # expectedHeadOid hace que falle sin pisar nada si main ha cambiado durante la ejecución.
+          git diff --cached --name-status --no-renames > "$RUNNER_TEMP/changes.txt"
+          MSG="$msg" HEAD_OID="$(git rev-parse HEAD)" python3 - > "$RUNNER_TEMP/commit.json" <<'PY'
+          import base64, json, os, pathlib
+          adds, dels = [], []
+          for line in open(os.path.join(os.environ["RUNNER_TEMP"], "changes.txt"), encoding="utf-8"):
+              status, path = line.rstrip("\n").split("\t", 1)
+              if status == "D":
+                  dels.append({"path": path})
+              else:
+                  adds.append({"path": path, "contents": base64.b64encode(pathlib.Path(path).read_bytes()).decode()})
+          query = ("mutation($input: CreateCommitOnBranchInput!) "
+                   "{ createCommitOnBranch(input: $input) { commit { oid url } } }")
+          print(json.dumps({"query": query, "variables": {"input": {
+              "branch": {"repositoryNameWithOwner": os.environ["GITHUB_REPOSITORY"], "branchName": "main"},
+              "expectedHeadOid": os.environ["HEAD_OID"],
+              "message": {"headline": os.environ["MSG"]},
+              "fileChanges": {"additions": adds, "deletions": dels},
+          }}}))
+          PY
+          echo "Cambios: $(wc -l < "$RUNNER_TEMP/changes.txt") ficheros, $(du -h "$RUNNER_TEMP/commit.json" | cut -f1) de carga"
+          url=$(gh api graphql --input "$RUNNER_TEMP/commit.json" --jq '.data.createCommitOnBranch.commit.url')
+          echo "Commit: $url"
           {
-            echo "### Análisis propuesto en el PR #$pr"
-            echo "$summary"
+            echo "### Análisis publicado"
+            jq -r '"- Ejecución: `\(.run_id)`\n- Último sondeo: \(.last_poll) (\(.n_polls) sondeos)\n- Simulaciones: \(.n_sims)\n- Tamaño: \(.size_bytes / 1e6 | floor) MB"' data/published/latest/PUBLISHED.json
+            echo "- Commit: $url"
           } >> "$GITHUB_STEP_SUMMARY"

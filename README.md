@@ -119,24 +119,17 @@ uv run electoral sources refresh --only polls
 uv run electoral run --all                     # ~6 min con 2 CPU
 uv run electoral publish                       # exige las 52 circunscripciones (o --partial)
 uv run electoral data seed                     # actualiza también los datos semilla
-git add data/published data/seed && git commit -S -m "Análisis publicado"   # y PR a main
+git add data/published data/seed && git commit -S -m "Análisis publicado" && git push
 ```
 
 El flujo `.github/workflows/publish.yml` hace lo mismo cada día a las 06:30 (hora de Madrid) y también
 puede lanzarse a mano desde la pestaña Actions de GitHub (con `force` para recalcular sin sondeos nuevos,
-p. ej. tras cambiar el modelo). Si hay sondeos nuevos, no escribe en `main`: sube la instantánea a la rama
-`auto/published-snapshot`, abre (o actualiza) un PR y activa el auto-merge por squash. Así se cumplen las
-reglas de `main` (commits firmados, historial lineal y CodeQL), porque el commit de squash lo firma GitHub.
-Streamlit Cloud redespliega la app cuando el PR entra en `main`.
+p. ej. tras cambiar el modelo). Si hay sondeos nuevos, crea el commit en `main` con la API de GitHub
+(`createCommitOnBranch`) en lugar de `git push`: así GitHub lo firma y sale como Verified, que es lo que
+exige la regla de commits firmados de `main`. Streamlit Cloud redespliega la app al recibir el commit.
 
-Requisitos en GitHub:
-
-- Settings → General → «Allow auto-merge» activado (y, opcionalmente, «Automatically delete head branches»).
-- CodeQL activado (Settings → Advanced Security → Code scanning).
-- Recomendado: un secreto de Actions `PUBLISH_TOKEN` con un token fine-grained limitado a este repositorio
-  (Contents y Pull requests en escritura). Con él, CodeQL se lanza solo en el PR. Sin él, el flujo usa el
-  `GITHUB_TOKEN`, hay que activar «Allow GitHub Actions to create and approve pull requests» (Settings →
-  Actions → General) y GitHub deja los checks del PR pendientes hasta pulsar «Approve workflows to run».
+Si el ruleset de `main` incluye reglas que un commit directo del bot no puede cumplir (por ejemplo, Code
+Scanning), añade GitHub Actions a la lista de bypass del ruleset (Settings → Rules → Rulesets).
 
 **Modo solo lectura.** En la configuración de la app en Streamlit Cloud (Settings → Secrets):
 
